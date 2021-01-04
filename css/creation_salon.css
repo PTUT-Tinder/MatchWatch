@@ -1,0 +1,46 @@
+.ensemble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+.bouton_suivant {
+    /* Red */
+    background: #EF3340;
+
+    /* Ombre Subtile */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    /* Auto Layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.lien {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    /* Bleu d'accentuation */
+    color: #4D74CB;
+}
