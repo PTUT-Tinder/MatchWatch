@@ -85,7 +85,7 @@ header{
     margin: 10px;
     vertical-align: middle;
     transition: 0.2s;
-}
+} 
 
 #nav-bar #inscr, #nav-bar #connect:hover{
     color: black;
