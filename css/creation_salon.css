@@ -148,7 +148,7 @@ p {
     /* identical to box height */
 
     color: #FFFFFF;
-
+    background: #1E232F;
 
     /* Inside Auto Layout */
     flex: none;
@@ -188,7 +188,7 @@ p {
 
     /* identical to box height */
 
-    color: #000000;
+    color: #1E232F;
 
 
     /* Inside Auto Layout */
