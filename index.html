@@ -3,16 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Document</title>  
     <link href="css/main.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <ul id="nav bar">
-            <li></li>
-            <li><a href="#">Se connecter</a></li>
-            <li><a href="#">S'inscrire</a></li>
+        <div class="toggle">
+            <i class="fa fa-bars active-bar" aria-hidden="true"></i>
+        </div>
+        <ul id="nav-bar">
+            
+
+            <div class="responsive-container">
+                <ul class="responsive">
+                    <li><a href="#" id="joinSloon">Rejoindre un salon</a></li>
+                    <li><a href="creation_salon.html" id="createSaloon">Créer un salon</a></li>
+                    <li><a href="#" id="profil">Mon profil</a></li>
+                </ul> 
+            </div>
+
+            <div class="button-container">
+                <li><a href="connexion.html" id="connect">Se connecter</a></li>
+            <li><a href="inscription.html" id="inscr">S'inscrire</a></li>
+            </div>
         </ul>
     </header>
 
@@ -20,9 +35,11 @@
 
         <div id="slogan">
             <img src="img/Logo.svg" alt="logoMatchWatch" />
-            <h1>Trouvez le film</h1>
-            <h3>qui va mettre <br>tout le monde d'accord</h3>
-            <a href="join.html" id="chooseFilm">Choisir un film</a>
+            <div>
+                <h1>Trouvez le film</h1>
+                <h3>qui va mettre <br>tout le monde d'accord</h3>
+                <a href="join.html" id="chooseFilm">Choisir un film</a>
+            </div>
         </div>
 
         <div id="container">
@@ -47,4 +64,17 @@
     <footer>
 
     </footer>
-</body></html>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- je fais le js ici parce que c'est pas long -->
+    <script>
+        $(document).ready(function(){
+                $(".active-bar").click(function(evt){
+                $(".responsive-container").toggleClass("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
