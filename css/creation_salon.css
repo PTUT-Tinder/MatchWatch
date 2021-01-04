@@ -1,0 +1,199 @@
+.ensemble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+.bouton-suivant {
+    /* Red */
+    background: #EF3340;
+
+    /* Ombre Subtile */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    /* Auto Layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.lien {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    /* Bleu d'accentuation */
+    color: #4D74CB;
+}
+
+
+h2 {
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.input-nom {
+    /* Blue 0 */
+    background: #1E232F;
+
+    /* Blue +45 */
+    border: 1px solid #8290B0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 360px;
+    height: 40px;
+}
+
+p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.bienvenue {
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 74px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.titre2 {
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 37px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.disposition-bouton {
+    /* Auto Layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 25px;
+}
+
+.btn-connecter {
+    /* Auto Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 25px;
+
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 15px 0px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.btn-inscription {
+    /* Auto Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 25px;
+
+    position: static;
+    width: 127px;
+    height: 41px;
+    left: 172px;
+    top: 0px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 15px 0px;
+
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* identical to box height */
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
