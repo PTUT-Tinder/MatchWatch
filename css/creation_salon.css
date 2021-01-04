@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
+    align-items: stretch;
+
+
 }
 
 .bouton-suivant {
@@ -120,6 +122,7 @@ p {
     order: 1;
     flex-grow: 0;
     margin: 0px 25px;
+    text-align: end;
 }
 
 .btn-connecter {
@@ -148,7 +151,7 @@ p {
     /* identical to box height */
 
     color: #FFFFFF;
-
+    background: #1E232F;
 
     /* Inside Auto Layout */
     flex: none;
@@ -188,7 +191,7 @@ p {
 
     /* identical to box height */
 
-    color: #000000;
+    color: #1E232F;
 
 
     /* Inside Auto Layout */
@@ -196,4 +199,19 @@ p {
     order: 0;
     flex-grow: 0;
     margin: 0px 10px;
+}
+
+.zone-bleu {
+    /* Blue +5 */
+    background: #282E3E;
+
+    /* Ombre Subtile */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 25px 50px;
+
 }
