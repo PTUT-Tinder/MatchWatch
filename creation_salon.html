@@ -14,8 +14,8 @@
         <div class="toggle">
             <i class="fa fa-bars active-bar" aria-hidden="true"></i>
         </div>
+        
         <ul id="nav-bar">
-
             <div class="responsive-container">
                 <ul class="responsive">
                     <li><a href="#" id="joinSloon">Rejoindre un salon</a></li>
@@ -42,4 +42,13 @@
     <footer>
 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- je fais le js ici parce que c'est pas long -->
+    <script>
+        $(document).ready(function(){
+                $(".active-bar").click(function(evt){
+                $(".responsive-container").toggleClass("active");
+            });
+        });
+    </script>
 </body></html>
