@@ -198,5 +198,7 @@ header{
 
 
 @media (max-width:768px){
-
+    .responsive{
+        width: 100%;
+    }
 }

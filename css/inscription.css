@@ -96,10 +96,6 @@ main::before{
 transform: rotate(15deg);
 }
 
-
-
-
-
 .container{
     margin-top: 50px;
     width: 360px;
@@ -109,7 +105,7 @@ transform: rotate(15deg);
     border-radius: 3px;
 }
 
-.container-connexion{
+.container-inscription{
     margin-top: 125px;
     display: flex;
     flex-wrap: wrap;
@@ -117,14 +113,14 @@ transform: rotate(15deg);
     align-items: center;
 }
 
-.container-connexion form{
+.container-inscription form{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.container-connexion input[type="text"], .container-connexion input[type="password"]{
+.container-inscription input[type="text"], .container-inscription input[type="password"]{
     background: #1E232F;
     border: 1px solid #8290B0;
     box-sizing: border-box;
@@ -134,23 +130,25 @@ transform: rotate(15deg);
     outline: none;
 }
 
-.container-connexion label{
+.container-inscription label{
     margin: 10px;
     width: 100%;
     font-weight: bold;
     margin-top: 30px;
 }
 
-.container-connexion h1{
+.container-inscription h1{
     font-weight: bold;
     font-size: 48px;
     line-height: 74px;
     letter-spacing: 3px;
     width: 100%;
     text-align: center;
+    margin: 0;
+    margin-top: 30px;
 }
 
-.container-connexion input[type="submit"]{
+.container-inscription input[type="submit"]{
     border: none;
     color: white;
     font-size: 20px;
@@ -164,16 +162,16 @@ transform: rotate(15deg);
     margin: 30px;
 }
 
-.container-inscr{
+.container-connexion{
     margin-bottom: 100px;
 }
 
-.container-inscr a{
+.container-connexion a{
     text-decoration: none;
     color: #EF3340;
 }
 
-.container-inscr #inscr{
+.container-connexion #inscr{
     color: black;
     background-color: white;
     padding: 20px;
@@ -189,7 +187,7 @@ transform: rotate(15deg);
     transform: translateX(-50%);
 }
 
-.container-inscr #inscr:hover{
+.container-connexion #inscr:hover{
     color: white;
     padding: 20px;
     background: none;
@@ -201,14 +199,15 @@ transform: rotate(15deg);
     font-weight: bold;
 }
 
-.container-inscr h1{
+.container-connexion h1{
     font-size: 24px;
 }
 
-.container-inscr p{
+.container-connexion p{
     font-size: 14px;
     margin-bottom: 35px;
 }
+
 
 input{
     color: white;
