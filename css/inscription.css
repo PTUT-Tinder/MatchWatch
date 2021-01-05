@@ -76,25 +76,13 @@ main{
     justify-content: center;
     align-items: center;
 
-    background-image: url(../img/Logo.svg);
     background-repeat: no-repeat;
     background-size: 175px;
     background-position-y: 95%;
     background-position-x: 90%;
 }
 
-main::before{
-    content: "";
-    position: absolute;
-    background-color: #14171F;
-    width: 750px;
-    height: 736.51px;
-    left: -24.38px;
-    top: -253px;
-    opacity: 0.5;
-    z-index: -1;
-transform: rotate(15deg);
-}
+
 
 .container{
     margin-top: 50px;
