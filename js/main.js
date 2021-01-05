@@ -1,5 +1,5 @@
 $(document).ready(() => {
-	$(".active-bar").click((evt) => {
+	$(".hamburger").click((evt) => {
 		$(".responsive-container").toggleClass("active");
 		$(".hamburger").toggleClass("is-active");
 	});
