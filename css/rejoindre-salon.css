@@ -1,0 +1,298 @@
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ensemble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: stretch;
+    margin: 10px;
+    justify-content: center;
+}
+
+.bouton-suivant {
+    /* Red */
+    background: #EF3340;
+
+    /* Ombre Subtile */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    /* Auto Layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 40px;
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    border: 1px solid #282E3E;
+    color: #FFFFFF;
+
+    margin: 30px 0 20px 0;
+}
+.position-bouton-suivant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h2 {
+
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.input-nom {
+    /* Blue 0 */
+    background: #1E232F;
+
+    /* Blue +45 */
+    border: 1px solid #8290B0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    color: #FFFFFF;
+}
+
+p {
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.bienvenue {
+    width: 100%;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 74px;
+    letter-spacing: 3px;
+    width: 100%;
+    text-align: center;
+
+    /* identical to box height */
+    display: block;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.titre2 {
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 37px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.disposition-bouton {
+    /* Auto Layout */
+
+    align-items: center;
+    padding: 0px;
+    /* Inside Auto Layout */
+
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+    text-align: end;
+}
+
+.btn-connecter {
+    /* Auto Layout */
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    padding: 10px 25px;
+
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 15px 0px;
+
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* identical to box height */
+
+    color: #FFFFFF;
+    background: #1E232F;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+
+}
+
+.btn-inscription {
+    /* Auto Layout */
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    padding: 10px 25px;
+
+    border: 2px solid #FFFFFF;
+    background: #FFFFFF;
+    border-radius: 5px;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 15px 0px;
+
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* identical to box height */
+
+    color: #1E232F;
+
+}
+
+.zone-bleu {
+    /* Blue +5 */
+    background: #282E3E;
+
+    /* Ombre Subtile */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 25px 25px;
+
+    padding: 0px 30px 10px 30px;
+
+    width: 450px;
+    justify-content: center;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.lien-more {
+    text-decoration: none;
+    color: #EF3340;
+}
+
+.lien-more:hover{
+    text-decoration: underline;
+}
+
+.disposition-bouton a{
+    text-decoration: none;
+}
+
+.disposition-bouton a:hover{
+    transform: scale(1.05);
+}
+
+
+.toggle{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    transform: translate(-25%,-25%);
+    padding: 10px 20px;
+    color: white;
+    font-size: 40px;
+    z-index: 2;
+}
+
+.responsive-container{
+    display: none;
+}
+
+.responsive{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 350px;
+    background: #1E232F;
+    padding: 0;
+    padding-top: 150px;
+    height: 100%;
+    box-shadow: 0 0 10px black;
+    z-index: 1;
+}
+
+.responsive li{
+    display: block;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.responsive li a{
+    color: white;
+    text-decoration: none;
+}
+
+.responsive li:hover{
+    background-color: #14171F;
+}
+
+.active{
+    display: block;
+}
+
+
+input{
+    color: white;
+    font-size: 15px;
+    padding-left: 10px;
+}
