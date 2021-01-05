@@ -6,6 +6,7 @@
     <title>Document</title>
     <link href="css/creation-salon.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,12 +15,11 @@
             <i class="fa fa-bars active-bar" aria-hidden="true"></i>
         </div>
         <ul id="nav-bar">
-
             <div class="responsive-container">
                 <ul class="responsive">
-                    <li><a href="#" id="joinSloon">Rejoindre un salon</a></li>
+                    <li><a href="#" id="joinSaloon">Rejoindre un salon</a></li>
                     <li><a href="creation-salon.html" id="createSaloon">Créer un salon</a></li>
-                    <li><a href="#" id="profil">Mon profil</a></li>
+                    <li><a href="profil.html" id="profil">Mon profil</a></li>
                 </ul>
             </div>
         </ul>
@@ -63,6 +63,16 @@
     <footer>
 
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- je fais le js ici parce que c'est pas long -->
+    <script>
+        $(document).ready(function(){
+                $(".active-bar").click(function(evt){
+                $(".responsive-container").toggleClass("active");
+            });
+        });
+    </script>
 </body>
 
 </html>
