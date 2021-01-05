@@ -47,7 +47,7 @@ main{
 }
 
 .position-lien{
-    display: flex;
+    padding: 0;
     align-items: center;
     justify-content: center;
 }
@@ -58,10 +58,12 @@ main{
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
+    
 
     /* identical to box height */
-    display: flex;
-    align-items: center;
+    display: block;
+    text-align: center;
+    justify-content: center;
 
     /* Bleu d'accentuation */
     color: #4D74CB;
@@ -108,15 +110,18 @@ p {
     color: rgba(255, 255, 255, 0.8);
 }
 
+
 .bienvenue {
-    font-family: Overpass;
-    font-style: normal;
+    width: 100%;
     font-weight: bold;
     font-size: 48px;
     line-height: 74px;
+    letter-spacing: 3px;
+    width: 100%;
+    text-align: center;
 
     /* identical to box height */
-    display: flex;
+    display: block;
     align-items: center;
 
     color: #FFFFFF;
@@ -256,70 +261,4 @@ p {
 
 .disposition-bouton a:hover{
     transform: scale(1.05);
-}
-
-.button-container{
-    width: 300px;
-    height: 75px;
-    display: flex;
-    position: fixed;
-    right: 50px;
-}
-
-.toggle{
-    position: fixed;
-    top: 50px;
-    left: 50px;
-    transform: translate(-25%,-25%);
-    padding: 10px 20px;
-    color: white;
-    font-size: 40px;
-    z-index: 2;
-}
-
-.responsive-container{
-    display: none;
-}
-
-.responsive{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 350px;
-    background: #1E232F;
-    padding: 0;
-    padding-top: 150px;
-    height: 100%;
-    box-shadow: 0 0 10px black;
-    z-index: 1;
-}
-
-.responsive li{
-    display: block;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.responsive li a{
-    color: white;
-    text-decoration: none;
-}
-
-.responsive li:hover{
-    background-color: #14171F;
-}
-
-.active{
-    display: block;
-}
-input{
-    color: white;
-    font-size: 15px;
-    padding-left: 10px;
 }
