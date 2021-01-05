@@ -238,6 +238,8 @@ p {
 
     width: 450px;
     justify-content: center;
+
+    z-index: 1;
 }
 
 *,
@@ -263,7 +265,6 @@ p {
     transform: scale(1.05);
 }
 
-
 .toggle{
     position: fixed;
     top: 50px;
@@ -272,7 +273,7 @@ p {
     padding: 10px 20px;
     color: white;
     font-size: 40px;
-    z-index: 2;
+    z-index: 1;
 }
 
 .responsive-container{
@@ -289,7 +290,6 @@ p {
     padding-top: 150px;
     height: 100%;
     box-shadow: 0 0 10px black;
-    z-index: 1;
 }
 
 .responsive li{
@@ -306,20 +306,9 @@ p {
 
 .responsive li a{
     color: white;
-    text-decoration: none;
 }
 
 .responsive li:hover{
     background-color: #14171F;
 }
 
-.active{
-    display: block;
-}
-
-
-input{
-    color: white;
-    font-size: 15px;
-    padding-left: 10px;
-}
