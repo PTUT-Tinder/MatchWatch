@@ -29,7 +29,7 @@ main{
     justify-content: center;
 
     padding: 10px 40px;
-    font-family: Roboto;
+    font-family: Overpass;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -53,7 +53,7 @@ main{
 }
 
 .lien {
-    font-family: Roboto;
+    font-family: Overpass;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -74,7 +74,7 @@ main{
 
 h2 {
 
-    font-family: Roboto;
+    font-family: Overpass;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -95,10 +95,11 @@ h2 {
     border-radius: 5px;
     width: 100%;
     height: 40px;
+    color: #FFFFFF;
 }
 
 p {
-    font-family: Roboto;
+    font-family: Overpass;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -166,7 +167,7 @@ p {
     flex-grow: 0;
     margin: 15px 0px;
 
-    font-family: Roboto;
+    font-family: Overpass;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -203,7 +204,7 @@ p {
     flex-grow: 0;
     margin: 15px 0px;
 
-    font-family: Roboto;
+    font-family: Overpass;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -248,3 +249,12 @@ p {
 .lien-more:hover{
     text-decoration: underline;
 }
+
+.disposition-bouton a{
+    text-decoration: none;
+}
+
+.disposition-bouton a:hover{
+    transform: scale(1.05);
+}
+
