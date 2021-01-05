@@ -68,6 +68,7 @@ header {
     padding-top: 150px;
     height: 100%;
     box-shadow: 0 0 10px black;
+    margin: 0;
 }
 
 .responsive li {
