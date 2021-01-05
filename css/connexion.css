@@ -1,107 +1,30 @@
-html{
+html {
     margin: 0;
-    font-family: 'Overpass', sans-serif;
+    font-family: "Overpass", sans-serif;
 }
 
-body{
-    
-    color: #FFFFFF
+body {
+    color: #ffffff;
 }
 
-.toggle{
-    position: fixed;
-    top: 50px;
-    left: 50px;
-    transform: translate(-25%,-25%);
-    padding: 10px 20px;
-    color: white;
-    font-size: 40px;
-    z-index: 2;
-}
-
-.responsive-container{
-    display: none;
-}
-
-.responsive{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 350px;
-    background: #1E232F;
-    padding: 0;
-    padding-top: 150px;
-    height: 100%;
-    box-shadow: 0 0 10px black;
-    z-index: 1;
-}
-
-.responsive li{
-    display: block;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.responsive li a{
-    color: white;
-    text-decoration: none;
-}
-
-.responsive li:hover{
-    background-color: #14171F;
-}
-
-.active{
-    display: block;
-}
-
-main{
+main {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-image: url(../img/Logo.svg);
-    background-repeat: no-repeat;
-    background-size: 175px;
-    background-position-y: 95%;
-    background-position-x: 90%;
 }
 
-main::before{
-    content: "";
-    position: absolute;
-    background-color: #14171F;
-    width: 750px;
-    height: 736.51px;
-    left: -24.38px;
-    top: -253px;
-    opacity: 0.5;
-    z-index: -1;
-transform: rotate(15deg);
-}
-
-
-
-
-
-.container{
+.container {
     margin-top: 50px;
     width: 360px;
-    background-color: #282E3E;
+    background-color: #282e3e;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 20px;
     border-radius: 3px;
 }
 
-.container-connexion{
+.container-connexion {
     margin-top: 125px;
     display: flex;
     flex-wrap: wrap;
@@ -109,16 +32,17 @@ transform: rotate(15deg);
     align-items: center;
 }
 
-.container-connexion form{
+.container-connexion form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.container-connexion input[type="text"], .container-connexion input[type="password"]{
-    background: #1E232F;
-    border: 1px solid #8290B0;
+.container-connexion input[type="text"],
+.container-connexion input[type="password"] {
+    background: #1e232f;
+    border: 1px solid #8290b0;
     box-sizing: border-box;
     border-radius: 5px;
     width: 100%;
@@ -126,14 +50,14 @@ transform: rotate(15deg);
     outline: none;
 }
 
-.container-connexion label{
+.container-connexion label {
     margin: 10px;
     width: 100%;
     font-weight: bold;
     margin-top: 30px;
 }
 
-.container-connexion h1{
+.container-connexion h1 {
     font-weight: bold;
     font-size: 48px;
     line-height: 74px;
@@ -142,7 +66,7 @@ transform: rotate(15deg);
     text-align: center;
 }
 
-.container-connexion input[type="submit"]{
+.container-connexion input[type="submit"] {
     border: none;
     color: white;
     font-size: 20px;
@@ -150,22 +74,22 @@ transform: rotate(15deg);
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: #EF3340;
+    background: #ef3340;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     margin: 30px;
 }
 
-.container-inscr{
+.container-inscr {
     margin-bottom: 100px;
 }
 
-.container-inscr a{
+.container-inscr a {
     text-decoration: none;
-    color: #EF3340;
+    color: #ef3340;
 }
 
-.container-inscr #inscr{
+.container-inscr #inscr {
     color: black;
     background-color: white;
     padding: 20px;
@@ -181,7 +105,7 @@ transform: rotate(15deg);
     transform: translateX(-50%);
 }
 
-.container-inscr #inscr:hover{
+.container-inscr #inscr:hover {
     color: white;
     padding: 20px;
     background: none;
@@ -193,16 +117,16 @@ transform: rotate(15deg);
     font-weight: bold;
 }
 
-.container-inscr h1{
+.container-inscr h1 {
     font-size: 24px;
 }
 
-.container-inscr p{
+.container-inscr p {
     font-size: 14px;
     margin-bottom: 35px;
 }
 
-input{
+input {
     color: white;
     font-size: 15px;
     padding-left: 10px;

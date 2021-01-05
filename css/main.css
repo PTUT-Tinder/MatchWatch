@@ -1,39 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
 
-html{
+html {
     background-image: url("../img/bkcg2.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: bottom right;
 }
 
-html, body{
+html,
+body {
     margin: 0;
-    font-family: 'Overpass', sans-serif;
+    font-family: "Overpass", sans-serif;
     /*background-color: #1E232F;*/
-    
-    color: #FFFFFF
+
+    color: #ffffff;
 }
 
-header{
+header {
     position: absolute;
-} 
+}
 
-#nav-bar{
+#nav-bar {
     margin-top: 50px;
-   display: flex;
-   width: 100%;
+    display: flex;
+    width: 100%;
 }
 
-#nav-bar, #nav-bar ul{
-   list-style-type: none;
+#nav-bar,
+#nav-bar ul {
+    list-style-type: none;
 }
 
-#nav-bar ul{
+#nav-bar ul {
     display: inline-block;
 }
 
-.button-container{
+.button-container {
     width: 300px;
     height: 75px;
     display: flex;
@@ -41,151 +43,144 @@ header{
     right: 50px;
 }
 
-.toggle{
+.toggle {
     position: fixed;
     top: 40px;
     left: 50px;
-    transform: translate(-25%,-25%);
+    transform: translate(-25%, -25%);
     padding: 10px 20px;
     color: white;
     font-size: 40px;
     z-index: 100;
 }
 
-.responsive-container{
+.responsive-container {
     display: none;
 }
 
-.responsive{
+.responsive {
     position: fixed;
     left: 0;
     top: 0;
     width: 350px;
-    background: #1E232F;
+    background: #1e232f;
     padding: 0;
     padding-top: 150px;
     height: 100%;
     box-shadow: 0 0 10px black;
+    margin: 0;
 }
 
-.responsive li{
+.responsive li a {
     display: block;
     margin: 0;
-    width: 100%;
     text-align: center;
     font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.responsive li a{
+    padding: 1em;
     color: white;
 }
 
-.responsive li:hover{
-    background-color: #14171F;
+.responsive .logo {
+    width: 200px;
 }
 
-#nav-bar a{
+.responsive li a:hover {
+    background-color: #14171f;
+}
+
+#nav-bar a {
     text-decoration: none;
-    margin: 10px;
     vertical-align: middle;
     transition: 0.2s;
-} 
+}
 
-#nav-bar #inscr, #nav-bar #connect:hover{
+#nav-bar #inscr, #nav-bar #connect {
+    font-weight: bold;
+    width: 150px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    margin: 0 15px;
+}
+
+#nav-bar #inscr,
+#nav-bar #connect:hover {
     color: black;
     background-color: white;
-    padding: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 150px;
-    border-radius: 5px;
-    font-weight: bold;
-    border: 2px solid white;
 }
 
-#nav-bar #connect, #nav-bar #inscr:hover{
+#nav-bar #connect,
+#nav-bar #inscr:hover {
     color: white;
-    padding: 20px;
     background: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 150px;
-    border: 2px solid white;
-    border-radius: 5px;
-    font-weight: bold;
 }
 
-#slogan{
-    background-image: url(../img/landing%20page.jpg);   
+#slogan {
+    background-image: url(../img/landing%20page.jpg);
     background-size: cover;
     height: 130vh;
     padding-left: 150px;
     margin-bottom: 100px;
 }
 
-#slogan img{
+#slogan img {
     max-height: 100px;
     max-width: 300px;
     margin-top: 200px;
 }
 
-#slogan div h1{
+#slogan div h1 {
     font-size: 70px;
 }
 
-#slogan div h3{
+#slogan div h3 {
     font-size: 25px;
     margin-bottom: 40px;
 }
 
-#slogan div br{
-    content: '';
+#slogan div br {
+    content: "";
     display: block;
     margin-bottom: 10px;
 }
 
-#slogan div a{
+#slogan div a {
     text-decoration: none;
     color: white;
     width: 300px;
     height: 100px;
     font-weight: bold;
-    background-color: #EF3340;
+    background-color: #ef3340;
     padding: 10px;
     padding-right: 50px;
     border-radius: 5px;
-    font-family: 'Overpass', sans-serif;
+    font-family: "Overpass", sans-serif;
     background-image: url(../img/play.png);
     background-position: right 10% bottom 45%;
     background-repeat: no-repeat;
     background-size: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
-    
 }
 
-#slogan div a:active{
+#slogan div a:active {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
 }
 
-.etapes{
-    background-color: #282E3E;
+.etapes {
+    background-color: #282e3e;
     padding: 20px;
     margin: 20px;
     width: 15%;
     min-width: 300px;
-    height:250px;  
+    height: 250px;
 }
 
-.etapes h1{
+.etapes h1 {
     color: rgba(255, 255, 255, 0.5);
     font-size: 50px;
 }
 
-#container{
+#container {
     margin: 30px;
     display: flex;
     justify-content: center;
@@ -193,25 +188,27 @@ header{
     padding-bottom: 200px;
 }
 
-#container>h1{
+#container > h1 {
     width: 100%;
     text-align: center;
     font-size: 40px;
 }
 
-
-.active{
+.active {
     display: block;
 }
 
-
-@media (max-width:768px){
-    .responsive{
+@media (max-width: 768px) {
+    .responsive {
         width: 100%;
     }
 }
 
-.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before {
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::after,
+.hamburger.is-active .hamburger-inner::before {
     background-color: #fff;
 }
