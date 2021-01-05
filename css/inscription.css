@@ -1,14 +1,13 @@
-html{
+html {
     margin: 0;
-    font-family: 'Overpass', sans-serif;
+    font-family: "Overpass", sans-serif;
 }
 
-body{
-    
-    color: #FFFFFF
+body {
+    color: #ffffff;
 }
 
-.button-container{
+.button-container {
     width: 300px;
     height: 75px;
     display: flex;
@@ -16,27 +15,27 @@ body{
     right: 50px;
 }
 
-.toggle{
+.toggle {
     position: fixed;
     top: 50px;
     left: 50px;
-    transform: translate(-25%,-25%);
+    transform: translate(-25%, -25%);
     padding: 10px 20px;
     color: white;
     font-size: 40px;
     z-index: 2;
 }
 
-.responsive-container{
+.responsive-container {
     display: none;
 }
 
-.responsive{
+.responsive {
     position: fixed;
     left: 0;
     top: 0;
     width: 350px;
-    background: #1E232F;
+    background: #1e232f;
     padding: 0;
     padding-top: 150px;
     height: 100%;
@@ -44,7 +43,7 @@ body{
     z-index: 1;
 }
 
-.responsive li{
+.responsive li {
     display: block;
     margin: 0;
     width: 100%;
@@ -56,44 +55,41 @@ body{
     padding-bottom: 10px;
 }
 
-.responsive li a{
+.responsive li a {
     color: white;
     text-decoration: none;
 }
 
-.responsive li:hover{
-    background-color: #14171F;
+.responsive li:hover {
+    background-color: #14171f;
 }
 
-.active{
+.active {
     display: block;
 }
 
-main{
+main {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-repeat: no-repeat;
     background-size: 175px;
     background-position-y: 95%;
     background-position-x: 90%;
 }
 
-
-
-.container{
+.container {
     margin-top: 50px;
     width: 360px;
-    background-color: #282E3E;
+    background-color: #282e3e;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 20px;
     border-radius: 3px;
 }
 
-.container-inscription{
+.container-inscription {
     margin-top: 125px;
     display: flex;
     flex-wrap: wrap;
@@ -101,16 +97,17 @@ main{
     align-items: center;
 }
 
-.container-inscription form{
+.container-inscription form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.container-inscription input[type="text"], .container-inscription input[type="password"]{
-    background: #1E232F;
-    border: 1px solid #8290B0;
+.container-inscription input[type="text"],
+.container-inscription input[type="password"] {
+    background: #1e232f;
+    border: 1px solid #8290b0;
     box-sizing: border-box;
     border-radius: 5px;
     width: 100%;
@@ -118,14 +115,14 @@ main{
     outline: none;
 }
 
-.container-inscription label{
+.container-inscription label {
     margin: 10px;
     width: 100%;
     font-weight: bold;
     margin-top: 30px;
 }
 
-.container-inscription h1{
+.container-inscription h1 {
     font-weight: bold;
     font-size: 48px;
     line-height: 74px;
@@ -136,7 +133,7 @@ main{
     margin-top: 30px;
 }
 
-.container-inscription input[type="submit"]{
+.container-inscription input[type="submit"] {
     border: none;
     color: white;
     font-size: 20px;
@@ -144,22 +141,22 @@ main{
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: #EF3340;
+    background: #ef3340;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     margin: 30px;
 }
 
-.container-connexion{
+.container-connexion {
     margin-bottom: 100px;
 }
 
-.container-connexion a{
+.container-connexion a {
     text-decoration: none;
-    color: #EF3340;
+    color: #ef3340;
 }
 
-.container-connexion #inscr{
+.container-connexion #inscr {
     color: black;
     background-color: white;
     padding: 20px;
@@ -175,7 +172,7 @@ main{
     transform: translateX(-50%);
 }
 
-.container-connexion #inscr:hover{
+.container-connexion #inscr:hover {
     color: white;
     padding: 20px;
     background: none;
@@ -187,17 +184,16 @@ main{
     font-weight: bold;
 }
 
-.container-connexion h1{
+.container-connexion h1 {
     font-size: 24px;
 }
 
-.container-connexion p{
+.container-connexion p {
     font-size: 14px;
     margin-bottom: 35px;
 }
 
-
-input{
+input {
     color: white;
     font-size: 15px;
     padding-left: 10px;

@@ -1,17 +1,16 @@
-html{
+html {
     margin: 0;
-    font-family: 'Overpass', sans-serif;
+    font-family: "Overpass", sans-serif;
     overflow-x: hidden;
 }
 
-body{
-    
-    color: #FFFFFF;
+body {
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
-main{
+main {
     height: 100%;
     width: 100%;
     display: flex;
@@ -20,31 +19,33 @@ main{
     flex-wrap: wrap;
 }
 
-#nav-bar{
+#nav-bar {
     position: fixed;
     top: -50px;
     list-style-type: none;
     width: 100%;
-    background-color: #282E3E;
+    background-color: #282e3e;
     margin: 0;
     height: 130px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
 }
 
-#nav-bar>li img{
+#nav-bar > li img {
     height: 60px;
     margin-left: 130px;
     margin-top: 40px;
-    transform: translate(-25%,-25%);
+    transform: translate(-25%, -25%);
 }
 
-input{
+input {
     color: white;
     font-size: 15px;
     padding-left: 10px;
 }
 
-.informations, .lastviews, .reccos{
+.informations,
+.lastviews,
+.reccos {
     width: 80%;
     background-color: #282e3e71;
     margin: 100px;
@@ -53,11 +54,11 @@ input{
     display: flex;
 }
 
-.informations{
+.informations {
     margin-top: 200px;
 }
 
-.informations .pp{
+.informations .pp {
     width: 150px;
     height: 150px;
     margin: 50px;
@@ -68,21 +69,21 @@ input{
     box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.5);
 }
 
-.informations .pp img{
+.informations .pp img {
     width: 100%;
 }
 
-.informations .text h1{
+.informations .text h1 {
     margin-top: 60px;
     margin-bottom: -10px;
 }
 
-.informations .text h2:nth-child(2){
+.informations .text h2:nth-child(2) {
     margin-bottom: 30px;
     font-size: 20px;
 }
 
-
-.lastviews h1, .reccos h1{
+.lastviews h1,
+.reccos h1 {
     margin-left: 50px;
 }
