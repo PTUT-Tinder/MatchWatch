@@ -99,7 +99,7 @@ function createElements(evt){
             div.append($(this));
         }else{
             $(this).children(span).text("i");
-            $(".div2").remove();
+            $(this).parent().children(".div2").remove();
         }
     });
 }
