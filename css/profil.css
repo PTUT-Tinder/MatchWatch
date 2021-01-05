@@ -5,7 +5,7 @@ html{
 }
 
 body{
-    background-color: #1E232F;
+    
     color: #FFFFFF;
     margin: 0;
     padding: 0;
@@ -20,18 +20,7 @@ main{
     flex-wrap: wrap;
 }
 
-main::before{
-    content: "";
-    position: absolute;
-    background-color: #14171F;
-    width: 750px;
-    height: 736.51px;
-    left: -24.38px;
-    top: -253px;
-    opacity: 0.5;
-    z-index: -1;
-transform: rotate(15deg);
-}
+
 
 #nav-bar{
     position: fixed;
