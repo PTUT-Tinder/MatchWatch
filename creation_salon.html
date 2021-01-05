@@ -3,18 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>  
+    <title>Document</title>
     <link href="css/connexion.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
+    <header>
         <div class="toggle">
             <i class="fa fa-bars active-bar" aria-hidden="true"></i>
         </div>
+        
         <ul id="nav-bar">
-
             <div class="responsive-container">
                 <ul class="responsive">
                     <li><a href="#" id="joinSloon">Rejoindre un salon</a></li>
@@ -23,36 +24,24 @@
                 </ul> 
             </div>
         </ul>
-    </nav>
+    </header>
 
     <main>
-        <div class="container-global">
-            <div class="container container-connexion">
+
+        <div id="container">
+            <div id="1" class="etapes">
                 <h1>Bienvenue&nbsp;!</h1>
-                <form action="" method="">
-                    <label for="mail">Adresse Mail :</label>
-                    <input id="mail" name="mail" type="text"/>
-
-                    <label for="pwd">Mot de passe :</label>
-                    <input id="pwd" name="pwd" type="password"/>
-
-                    <input type="submit" name="connect" value="Se connecter"/>
-                </form>
+                <h2>Choisissez votre nom, il sera affiché aux autres</h2>
+                <input type="text" id="fname" name="fname">
             </div>
 
-            <div class="container container-inscr">
-                <h1>Vous n’êtes pas déjà inscrit&nbsp;?</h1>
-                <p>Le compte MatchWatch est optionnel, mais il vous offre de nombreux d’avantages&nbsp;! <a href="#">En savoir plus</a></p>
-                <a href="inscription.html" id="inscr">S'inscrire</a>
-            </div>
-
+            
         </div>
     </main>
 
     <footer>
 
     </footer>
-
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <!-- je fais le js ici parce que c'est pas long -->
     <script>
@@ -62,7 +51,4 @@
             });
         });
     </script>
-
-</body>
-
-</html>
+</body></html>
