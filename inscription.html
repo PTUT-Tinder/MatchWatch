@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>  
+    <link href="css/inscription.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="toggle">
+            <i class="fa fa-bars active-bar" aria-hidden="true"></i>
+        </div>
+        <ul id="nav-bar">
+
+            <div class="responsive-container">
+                <ul class="responsive">
+                    <li><a href="#" id="joinSloon">Rejoindre un salon</a></li>
+                    <li><a href="creation_salon.html" id="createSaloon">Créer un salon</a></li>
+                    <li><a href="#" id="profil">Mon profil</a></li>
+                </ul> 
+            </div>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container-global">
+            <div class="container container-inscription">
+                <h1>Bienvenue !</h1>
+                <form action="" method="">
+                    <label for="pseudo">Pseudo :</label>
+                    <input id="pseudo" name="pseudo" type="text"/>
+
+                    <label for="mail">Adresse Mail :</label>
+                    <input id="mail" name="mail" type="text"/>
+
+                    <label for="pwd">Mot de passe :</label>
+                    <input id="pwd" name="pwd" type="password"/>
+
+                    <label for="confirmpwd">Confirmation du mot de passe :</label>
+                    <input id="confirmpwd" name="confirmpwd" type="password"/>
+
+                    <input type="submit" name="connect" value="Se connecter"/>
+                </form>
+            </div>
+
+            <div class="container container-connexion">
+                <h1>Vous êtes déjà inscrit ?</h1>
+                <p>Le compte MatchWatch est optionnel, mais il vous offre de nombreux d’avantages ! <a href="#">En savoir plus</a></p>
+                <a href="inscription.html" id="connexion">Se connecter</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- je fais le js ici parce que c'est pas long -->
+    <script>
+        $(document).ready(function(){
+                $(".active-bar").click(function(evt){
+                $(".responsive-container").toggleClass("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
