@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>  
+    <link href="css/profil.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="toggle">
+            <i class="fa fa-bars active-bar" aria-hidden="true"></i>
+            
+        </div>
+        <ul id="nav-bar">
+            <li><a href="index.html"><img src="/img/Logo.svg" alt="logoMatchWatch"/></a></li>
+            <div class="responsive-container">
+                <ul class="responsive">
+                    <li><a href="#" id="joinSloon">Rejoindre un salon</a></li>
+                    <li><a href="creation_salon.html" id="createSaloon">Créer un salon</a></li>
+                    <li><a href="profil.html" id="profil">Mon profil</a></li>
+                </ul> 
+            </div>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="informations">
+            <div class="pp">
+                <img src="/img/pp_profil.png" />
+            </div>
+            <div class="text">
+                <h1 class="pseudo">Julien Lacroix</h1>
+                <h2 class="mail">mail@example.com</h2>
+                <h2 class="genres">Genres préférés :</h2>
+            </div>
+        </div>
+
+        <div class="lastviews">
+            <h1>Derniers vus</h1>
+        </div>
+
+        <div class="reccos">
+            <h1>Reccomandations</h1>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- je fais le js ici parce que c'est pas long -->
+    <script>
+        $(document).ready(function(){
+                $(".active-bar").click(function(evt){
+                $(".responsive-container").toggleClass("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

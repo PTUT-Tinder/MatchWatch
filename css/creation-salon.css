@@ -47,7 +47,7 @@ main{
 }
 
 .position-lien{
-    display: flex;
+    padding: 0;
     align-items: center;
     justify-content: center;
 }
@@ -58,10 +58,12 @@ main{
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
+    
 
     /* identical to box height */
-    display: flex;
-    align-items: center;
+    display: block;
+    text-align: center;
+    justify-content: center;
 
     /* Bleu d'accentuation */
     color: #4D74CB;
@@ -108,15 +110,18 @@ p {
     color: rgba(255, 255, 255, 0.8);
 }
 
+
 .bienvenue {
-    font-family: Overpass;
-    font-style: normal;
+    width: 100%;
     font-weight: bold;
     font-size: 48px;
     line-height: 74px;
+    letter-spacing: 3px;
+    width: 100%;
+    text-align: center;
 
     /* identical to box height */
-    display: flex;
+    display: block;
     align-items: center;
 
     color: #FFFFFF;
