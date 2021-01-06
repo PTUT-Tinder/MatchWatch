@@ -96,6 +96,7 @@ header {
 
 #nav-bar #inscr, #nav-bar #connect {
     font-weight: bold;
+    white-space: nowrap;
     width: 150px;
     border-radius: 5px;
     padding: 10px 20px;
