@@ -1,0 +1,17 @@
+[db]
+# Passed as options to Sequelize
+# See https://sequelize.org/master/class/lib/sequelize.js~Sequelize.html#instance-constructor-constructor
+dialect = "mariadb" # "mysql", "mariadb", "postgres", ou "mssql"
+host = "localhost"
+port = "3306"
+username = "root"
+password = ""
+database = "matchwatch"
+
+# Use this for SQLite:
+#   dialect = "sqlite"
+#
+# Then for disk storage:
+#   storage = "path/to/database.sqlite"
+# or temporary memory storage:
+#   storage = ":memory:"
