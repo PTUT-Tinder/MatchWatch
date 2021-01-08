@@ -32,7 +32,6 @@ db.sync().then(() => {
 					error: error.errors.map(err => err.message),
 				});
 			} else {
-				console.dir(JSON.stringify(error));
 				throw error;
 			}
 		}
