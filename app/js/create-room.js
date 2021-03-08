@@ -1,7 +1,7 @@
 
 var btn_creer = document.getElementById("creer-salon");
 
-btn_creer.addEventListener("click", creerCode());
+btn_creer.addEventListener("click", creerCode(e));
 
 function strRandom(o) {
   var a = 10,
@@ -32,13 +32,13 @@ function strRandom(o) {
 
 
 
-function creerCode(){
+function creerCode(e){
   var code;
   code = strRandom({
     UpperCase: true,
     includeNumbers: true,
     length: 6,
     startsWithLowerCase: false
-  });;
+  });
   window.alert(code);
 }
