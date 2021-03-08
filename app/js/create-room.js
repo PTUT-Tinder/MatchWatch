@@ -35,7 +35,7 @@ function strRandom(o) {
 function creerCode(){
   var code;
   code = strRandom({
-    UpperCase: false,
+    UpperCase: true,
     includeNumbers: true,
     length: 6,
     startsWithLowerCase: false
