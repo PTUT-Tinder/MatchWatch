@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const argon2 = require('argon2');
-const { db, User } = require("./db");
+const { db, User, } = require("./db");
+
+import { creerCode } from "./js/create-room.js";
 
 db.sync().then(() => {
 	const app = express();
@@ -64,6 +66,48 @@ db.sync().then(() => {
 				error: "Incorrect password",
 			});
 		}
+	});
+
+
+const rooms = [];
+
+	app.post("/api/createRoom", async(req, res) => {
+		const createdRoom = {
+			id : creerCode,
+			members : user.get("username"),
+		};
+
+		rooms.push(createdRoom);
+	
+		res.status(200).send({
+			id: createdRoom.get("id"),
+			members: createdRoom.get("members")
+		});
+	});
+
+	app.post("/api/joinRoom", async(req, res) => {
+		const Room = await rooms.findOne({
+			where : {
+				id : req.body.code,
+			}
+		});
+
+		if (Room == null) {
+			res.status(404).send({
+				error: "Unknown room",
+			});
+		} else if (Room != null) {
+			res.status(200).send({
+				id: Room.get("id"),
+				members: Room.get("members"),
+			});
+		} else {
+			res.status(403).send({
+				error: "Incorrect password",
+			});
+		}
+
+		Room.get("members").push(user.get("username"))
 	});
 	
 	app.listen(5000);
