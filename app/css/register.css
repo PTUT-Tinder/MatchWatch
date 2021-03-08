@@ -7,12 +7,24 @@ body {
     color: #ffffff;
 }
 
+.button-container {
+    width: 300px;
+    height: 75px;
+    display: flex;
+    position: fixed;
+    right: 50px;
+}
+
 main {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: 175px;
+    background-position-y: 95%;
+    background-position-x: 90%;
 }
 
 .container {
@@ -24,7 +36,7 @@ main {
     border-radius: 3px;
 }
 
-.container-connexion {
+.container-register {
     margin-top: 125px;
     display: flex;
     flex-wrap: wrap;
@@ -32,15 +44,15 @@ main {
     align-items: center;
 }
 
-.container-connexion form {
+.container-register form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.container-connexion input[type="text"],
-.container-connexion input[type="password"] {
+.container-register input[type="text"],
+.container-register input[type="password"] {
     background: #1e232f;
     border: 1px solid #8290b0;
     box-sizing: border-box;
@@ -50,23 +62,25 @@ main {
     outline: none;
 }
 
-.container-connexion label {
+.container-register label {
     margin: 10px;
     width: 100%;
     font-weight: bold;
     margin-top: 30px;
 }
 
-.container-connexion h1 {
+.container-register h1 {
     font-weight: bold;
     font-size: 48px;
     line-height: 74px;
     letter-spacing: 3px;
     width: 100%;
     text-align: center;
+    margin: 0;
+    margin-top: 30px;
 }
 
-.container-connexion input[type="submit"] {
+.container-register input[type="submit"] {
     border: none;
     color: white;
     font-size: 20px;
@@ -80,16 +94,16 @@ main {
     margin: 30px;
 }
 
-.container-inscr {
+.container-login {
     margin-bottom: 100px;
 }
 
-.container-inscr a {
+.container-login a {
     text-decoration: none;
     color: #ef3340;
 }
 
-.container-inscr #inscr {
+.container-login #inscr {
     color: black;
     background-color: white;
     padding: 20px;
@@ -105,7 +119,7 @@ main {
     transform: translateX(-50%);
 }
 
-.container-inscr #inscr:hover {
+.container-login #inscr:hover {
     color: white;
     padding: 20px;
     background: none;
@@ -117,11 +131,11 @@ main {
     font-weight: bold;
 }
 
-.container-inscr h1 {
+.container-login h1 {
     font-size: 24px;
 }
 
-.container-inscr p {
+.container-login p {
     font-size: 14px;
     margin-bottom: 35px;
 }

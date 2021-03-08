@@ -5,10 +5,15 @@ const { db, User } = require("./db");
 
 db.sync().then(() => {
 	const app = express();
-	
+
+	app.use(express.static("./public"));
 	app.use(bodyParser.json());
 
-	app.post("/register", async (req, res) => {
+	app.get("/api/ping", (req, res) => {
+		res.status(200).send({ nsg: "Pong!" });
+	})
+
+	app.post("/api/register", async (req, res) => {
 		const hashedPassword = await argon2.hash(req.body.password);
 
 		try {
@@ -37,7 +42,7 @@ db.sync().then(() => {
 		}
 	});
 	
-	app.post("/login", async (req, res) => {
+	app.post("/api/login", async (req, res) => {
 		const user = await User.findOne({
 			where: {
 				email: req.body.email,
