@@ -1,4 +1,5 @@
 config.toml
+public/
 
 .DS_Store
 ._*
