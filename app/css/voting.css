@@ -1,128 +1,128 @@
-html{
-    overflow-x: hidden;
+html {
+  overflow-x: hidden;
 }
 
-#nav-bar{
-    position: fixed;
-    top: -50px;
-    list-style-type: none;
-    width: 100%;
-    background-color: #282E3E;
-    margin: 0;
-    height: 130px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
-    z-index: 1;
+#nav-bar {
+  position: fixed;
+  top: -50px;
+  list-style-type: none;
+  width: 100%;
+  background-color: #282e3e;
+  margin: 0;
+  height: 130px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
-#nav-bar>li img{
-    height: 60px;
-    margin-left: 130px;
-    margin-top: 40px;
-    transform: translate(-25%,-25%);
+#nav-bar > li img {
+  height: 60px;
+  margin-left: 130px;
+  margin-top: 40px;
+  transform: translate(-25%, -25%);
 }
 
-.container-films{
-    margin-top: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 75%;
+.container-films {
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
 }
 
-.divPrincipale{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.divPrincipale {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.divPrincipale h1{
-    width: 100%;
-    text-align: center;
+.divPrincipale h1 {
+  width: 100%;
+  text-align: center;
 }
 
-
-.div{
-    width: 250px;
-    height:  auto;
-    margin: 30px;
-    padding: 10px;
-    border: 3px solid  #474747;
-    border-radius: 5px;
-    background-color: #282e3e67;
-    position: relative;
-    overflow: hidden;
+.div {
+  width: 250px;
+  height: auto;
+  margin: 30px;
+  padding: 10px;
+  border: 3px solid #474747;
+  border-radius: 5px;
+  background-color: #282e3e67;
+  position: relative;
+  overflow: hidden;
 }
 
-.div2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #282e3eec;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height:100%;
-    width: 100%;
+.div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282e3eec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.p{
-    text-align: center;
-    margin: 10px;
+.p {
+  text-align: center;
+  text-justify: auto;
+  margin: 10px;
 }
 
-.img{
-    width: 100%;
-    border-radius: 5px;
+.img {
+  width: 100%;
+  border-radius: 5px;
 }
 
-.h3{
-    width: 100%;
-    font-size: 15px;
-    text-align: center;
+.h3 {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
 }
 
-.button{
-    background-color: #474747ee;
-    border-radius: 7px;
-    border: none;
-    position: absolute;
-    height:50px;
-    width: 50px;
-    top: -5px;
-    left: -5px;
+.button {
+  background-color: #474747ee;
+  border-radius: 7px;
+  border: none;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: -5px;
+  left: -5px;
 }
 
-.select{
-    border: 3px solid  #EF3340;
+.select {
+  border: 3px solid #ef3340;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.reroll{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-    margin-top: 10px;
+.reroll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  margin-top: 10px;
 }
 
-button{
-    height: 75px;
-    width: 75px;
-    background-color: #4D74CB;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+button {
+  height: 75px;
+  width: 75px;
+  background-color: #4d74cb;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.button-select{
-    background-color: #EF3340;
+.button-select {
+  background-color: #ef3340;
 }
