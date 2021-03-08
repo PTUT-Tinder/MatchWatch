@@ -15,11 +15,6 @@ function makeid() {
 
 function creerCode(){
 	var code;
-	code = strRandom({
-		UpperCase: true,
-		includeNumbers: true,
-		length: 6,
-		startsWithLowerCase: false
-	});;
+	code = makeid()
 	window.alert(code);
 }
