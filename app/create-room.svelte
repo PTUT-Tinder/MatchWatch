@@ -3,6 +3,7 @@
     import "./css/main.css";
     import "./css/create-room.css";
     import NavBar from "./components/NavBar.svelte";
+    import "./js/create-room.js"
 </script>
 
 <NavBar />
