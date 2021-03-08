@@ -1,7 +1,7 @@
 
 var btn_creer = document.getElementById("creer-salon");
 
-btn_creer.addEventListener("click", creerCode());
+btn_creer.addEventListener("click", creerCode(e));
 
 function makeid() {
 	var text = "";
