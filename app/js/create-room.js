@@ -11,3 +11,8 @@ strRandom({
     startsWithLowerCase: false
   });
 
+function creerCode(){
+  var code;
+  code = strRandom();
+  window.alert(code);
+}

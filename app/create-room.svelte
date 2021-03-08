@@ -21,7 +21,7 @@
                     <p>Les participants pourront utiliser ce code pour vous rejoindre dans le salon, et vous pourrez
                         choisir un film ensemble</p>
                     <div class="position-bouton-suivant">
-                        <input class="bouton-suivant" type="submit" value="Suivant">
+                        <input class="bouton-suivant" type="submit" value="Suivant" id="creer-salon">
                     </div>
                 </form>
                 <div class="position-lien">
