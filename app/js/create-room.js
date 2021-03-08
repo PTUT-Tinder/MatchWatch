@@ -11,6 +11,6 @@ function makeid() {
 
 function creerCode(){
 	var code;
-	code = makeid()
+	code = makeid();
 	window.alert(code);
 }
