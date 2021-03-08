@@ -98,7 +98,7 @@ nav {
     border-radius: 5px;
     padding: 10px 20px;
     border: 2px solid white;
-    margin: 0 15px;
+    margin: 0 55px;
 }
 
 #nav-bar #register,
