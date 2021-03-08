@@ -26,7 +26,7 @@
                     <p>Les participants pourront utiliser ce code pour vous rejoindre dans le salon, et vous pourrez
                         choisir un film ensemble</p>
                     <div class="position-bouton-suivant">
-                        <input class="bouton-suivant" type="submit" value="Suivant" on:click="createRoom">
+                        <input class="bouton-suivant" type="submit" value="Suivant" on:click={createRoom}>
                     </div>
                 </form>
                 <div class="position-lien">
