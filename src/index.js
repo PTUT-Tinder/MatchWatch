@@ -71,7 +71,7 @@ db.sync().then(() => {
 
 const rooms = [];
 
-	app.post("/api/createRoom", async(req, res) => {
+	app.post("/api/create-room", async(req, res) => {
 		const createdRoom = {
 			id : creerCode,
 			members : user.get("username"),
@@ -85,7 +85,7 @@ const rooms = [];
 		});
 	});
 
-	app.post("/api/joinRoom", async(req, res) => {
+	app.post("/api/join-room", async(req, res) => {
 		const room = await rooms.find(room => room.id === req.body.id);
 
 		if (room == null) {
@@ -100,7 +100,6 @@ const rooms = [];
 			Room.get("members").push(user.get("username"));
 		}
 
-		
 	});
 	
 	app.listen(5000);
