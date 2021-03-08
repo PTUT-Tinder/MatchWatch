@@ -21,6 +21,9 @@ const User = db.define("User", {
 			isEmail: true,
 		},
 	},
+	genre: {
+		type: DataTypes.STRING,
+	},
 });
 
 module.exports = {
