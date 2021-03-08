@@ -30,7 +30,7 @@
               class="bouton-suivant"
               type="submit"
               value="Suivant"
-              on:click={createRoom}
+              on:click={creerCode}
             />
           </div>
         </form>
