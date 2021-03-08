@@ -2,8 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const argon2 = require('argon2');
 const { db, User, } = require("./db");
-
-import { creerCode } from "./js/create-room.js";
+const code = require("./js/create-room.js");
 
 db.sync().then(() => {
 	const app = express();
@@ -73,7 +72,7 @@ const rooms = [];
 
 	app.post("/api/create-room", async(req, res) => {
 		const createdRoom = {
-			id : creerCode,
+			id : code(),
 			members : user.get("username"),
 		};
 
