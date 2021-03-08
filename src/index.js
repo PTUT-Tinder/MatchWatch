@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const argon2 = require('argon2');
-const { db, User } = require("./db");
+const { db, User, Room } = require("./db");
+
+import { creerCode } from "./js/create-room.js";
 
 db.sync().then(() => {
 	const app = express();
@@ -64,6 +66,35 @@ db.sync().then(() => {
 				error: "Incorrect password",
 			});
 		}
+	});
+
+	app.post("/api/createRoom", async(req, res) => {
+		try {
+			const createdRoom = {
+				id : creerCode,
+				members : user.get("username"),
+			}
+	
+			res.status(200).send({
+				id: createdRoom.get("id"),
+				members: createdRoom.get("members")
+			});
+		} catch (error) {
+			if (
+				error.name === "SequelizeUniqueConstraintError" ||
+				error.name === "SequelizeValidationError"
+			) {
+				res.status(400).send({
+					error: error.errors.map(err => err.message),
+				});
+			} else {
+				throw error;
+			}
+		}
+	});
+
+	app.post("/api/joinRoom", async(req, res) => {
+
 	});
 	
 	app.listen(5000);
