@@ -9,8 +9,6 @@
 
 <NavBar />
 
-
-
 <main>
   <div class="container-films" />
 
