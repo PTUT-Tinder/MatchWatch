@@ -37,6 +37,7 @@ nav {
     display: flex;
     position: fixed;
     right: 50px;
+    margin-top: 50px;
 }
 
 .toggle {
@@ -98,7 +99,7 @@ nav {
     border-radius: 5px;
     padding: 10px 20px;
     border: 2px solid white;
-    margin: 50 15px;
+    margin: 0 15px;
 }
 
 #nav-bar #register,
