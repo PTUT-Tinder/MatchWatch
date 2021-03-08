@@ -3,7 +3,6 @@
     import "./css/main.css";
     import "./css/profile.css";
     import NavBar from "./components/NavBar.svelte";
-    import pfp from "./img/pp_profile.png";
 </script>
 
 <NavBar />
@@ -11,7 +10,7 @@
 <main>
     <div class="informations">
         <div class="pp">
-            <img src={pfp} alt="" />
+            <img src="" alt="" />
         </div>
         <div class="text">
             <h1 class="pseudo">Julien Lacroix</h1>
