@@ -3,7 +3,7 @@
   import "./css/main.css";
   import "./css/create-room.css";
   import NavBar from "./components/NavBar.svelte";
-  import { creerCode } from "./js/create-room.js";
+  import { creerCode } from "../src/utils/create-room.js";
 
   function createRoom() {}
 </script>
