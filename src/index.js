@@ -86,28 +86,21 @@ const rooms = [];
 	});
 
 	app.post("/api/joinRoom", async(req, res) => {
-		const Room = await rooms.findOne({
-			where : {
-				id : req.body.code,
-			}
-		});
+		const room = await rooms.find(room => room.id === req.body.id);
 
-		if (Room == null) {
+		if (room == null) {
 			res.status(404).send({
 				error: "Unknown room",
 			});
-		} else if (Room != null) {
-			res.status(200).send({
-				id: Room.get("id"),
-				members: Room.get("members"),
-			});
 		} else {
-			res.status(403).send({
-				error: "Incorrect password",
+			res.status(200).send({
+				id: room.get("id"),
+				members: room.get("members"),
 			});
+			Room.get("members").push(user.get("username"));
 		}
 
-		Room.get("members").push(user.get("username"))
+		
 	});
 	
 	app.listen(5000);
