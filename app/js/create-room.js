@@ -9,7 +9,7 @@ function makeid() {
 	return text;
 }
 
-export function creerCode(){
+module.exports = function creerCode(){
 	var code;
 	code = makeid();
 	window.alert(code);

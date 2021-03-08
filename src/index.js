@@ -2,8 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const argon2 = require('argon2');
 const { db, User, } = require("./db");
-
-import { creerCode } from "./js/create-room.js";
+const code = require("./js/create-room.js");
 
 db.sync().then(() => {
 	const app = express();
@@ -71,9 +70,9 @@ db.sync().then(() => {
 
 const rooms = [];
 
-	app.post("/api/createRoom", async(req, res) => {
+	app.post("/api/create-room", async(req, res) => {
 		const createdRoom = {
-			id : creerCode,
+			id : code(),
 			members : user.get("username"),
 		};
 
@@ -85,30 +84,22 @@ const rooms = [];
 		});
 	});
 
-	app.post("/api/joinRoom", async(req, res) => {
-		const Room = await rooms.findOne({
-			where : {
-				id : req.body.code,
-			}
-		});
+	app.post("/api/join-room", async(req, res) => {
+		const room = await rooms.find(room => room.id === req.body.id);
 
-		if (Room == null) {
+		if (room == null) {
 			res.status(404).send({
 				error: "Unknown room",
 			});
-		} else if (Room != null) {
-			res.status(200).send({
-				id: Room.get("id"),
-				members: Room.get("members"),
-			});
 		} else {
-			res.status(403).send({
-				error: "Incorrect password",
+			res.status(200).send({
+				id: room.get("id"),
+				members: room.get("members"),
 			});
+			Room.get("members").push(user.get("username"));
 		}
 
-		Room.get("members").push(user.get("username"))
 	});
 	
-	app.listen(5000);
+	app.listen(3000);
 });
