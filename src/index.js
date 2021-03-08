@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const argon2 = require('argon2');
-const { db, User, Room } = require("./db");
+const { db, User, } = require("./db");
 
 import { creerCode } from "./js/create-room.js";
 
