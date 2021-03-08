@@ -1,7 +1,7 @@
 <script>
     import "font-awesome/css/font-awesome.min.css";
-    import "../css/main.css";
-    import "../css/voting.css";
+    import "./css/main.css";
+    import "./css/voting.css";
     import "./js/main.js";
     import NavBar from "./components/NavBar.svelte";
     import logo from "./img/logo.svg";
