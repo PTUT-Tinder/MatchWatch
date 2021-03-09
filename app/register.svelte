@@ -5,6 +5,7 @@
   import NavBar from "./components/NavBar.svelte";
 
   function inscription(e) {
+    document.cookie = { username: document.getElementById("pseudo").value };
     fetch("/api/register", {
       method: "POST",
       headers: {

@@ -7,6 +7,7 @@
   function connexion(e) {
     e.preventDefault();
     e.stopPropagation();
+
     fetch("/api/login", {
       method: "POST",
       headers: {
@@ -18,7 +19,11 @@
       }),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        document.cookie = "username=" + data["username"];
+        document.cookie = "mail=" + data["email"];
+      })
       .catch((err) => console.log(err));
   }
 </script>
