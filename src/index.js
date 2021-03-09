@@ -91,11 +91,12 @@ const rooms = [];
 				error: "Unknown room",
 			});
 		} else {
+			room.members.push(req.body.username);
 			res.status(200).send({
-				id: room.id,
+				id: req.body.id,
 				members: room.members,
 			});
-			Room.members.push(req.body.username);
+			
 		}
 
 	});
