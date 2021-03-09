@@ -47,7 +47,7 @@
 				<input
 					type="submit"
 					name="connect"
-					value="Se connecter"
+					value="S'inscrire'"
 					id="register"
 					on:click={inscription}
 				/>
