@@ -30,7 +30,7 @@ main {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
 }
 
-#nav-bar > li img {
+#nav-bar>li img {
     height: 60px;
     margin-left: 130px;
     margin-top: 40px;
@@ -89,46 +89,49 @@ input {
 }
 
 li {
-    list-style:none !important;
-    color:#FFF;
-    padding:10px;
-    font-size:20px;
-    text-decoration:none;
-    }
-     
-    .genres ul {
-    background-color:none;
-    padding:0;
-    margin:0;
-    }
-     
-    .genres ul li {
+    list-style: none !important;
+    color: #FFF;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.genres ul {
+    background-color: none;
+    padding: 0;
+    margin: 0;
+}
+
+.genres ul li {
     list-style: none;
-    line-height:44px;
-    float:left;
-    background-color:none;
-    }
-     
-    .genres ul li a {
-    color:#FFF;
-    padding:10px;
-    font-size:20px;
-    text-decoration:none;
-    }
-     
-    li a:hover {
-    border-bottom:3px #FFF solid;
-    }
-    .genres ul li ul { display:none; } /* Rend le menu déroulant caché par défaut */
-     
-    .genres ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
-    z-index:99999;
-    display:list-item !important;
-    position:absolute;
-    margin-top:5px;
-    margin-left:-10px;
-    }
-     
-    .genres ul li:hover ul li {
-    float:none;
-    }
+    line-height: 44px;
+    float: left;
+    background-color: none;
+}
+
+.genres ul li a {
+    color: #FFF;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+.button-valide {
+    padding: 10px 20px;
+    /* Red */
+    background: #EF3340;
+
+    /* Ombre Subtile */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: #EF3340;
+
+    font-family: overpass;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}

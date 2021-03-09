@@ -15,7 +15,7 @@
         <div class="text">
             <h1 class="pseudo">Julien Lacroix</h1>
             <h2 class="mail">mail@example.com</h2>
-            
+
             <div class="genres">
                 <ul>
                     <li>
@@ -35,10 +35,40 @@
                                 <div>
                                     <input
                                         type="checkbox"
-                                        id="aventure"
-                                        name="aventure"
+                                        id="comedy"
+                                        name="comedy"
                                     />
-                                    <label for="aventure">Aventure</label>
+                                    <label for="comedy">Comedy</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="fantasy"
+                                        name="fantasy"
+                                    />
+                                    <label for="fantasy">Fantasy</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="adventure"
+                                        name="adventure"
+                                    />
+                                    <label for="adventure">Adventure</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="science-fiction"
+                                        name="science-fiction"
+                                    />
+                                    <label for="science-fiction">Science Fiction</label>
                                 </div>
                             </li>
                             <li>
@@ -51,6 +81,137 @@
                                     <label for="thriller">Thriller</label>
                                 </div>
                             </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="horror"
+                                        name="horror"
+                                    />
+                                    <label for="horror">Horror</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="animation"
+                                        name="animation"
+                                    />
+                                    <label for="animation">Animation</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="family"
+                                        name="family"
+                                    />
+                                    <label for="family">Family</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="documentary"
+                                        name="documentary"
+                                    />
+                                    <label for="documentary">Documentary</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="mystery"
+                                        name="mystery"
+                                    />
+                                    <label for="mystery">Mystery</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="drama"
+                                        name="drama"
+                                    />
+                                    <label for="drama">Drama</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="tv-movie"
+                                        name="tv-movie"
+                                    />
+                                    <label for="tv-movie">TV Movie</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="music"
+                                        name="music"
+                                    />
+                                    <label for="music">Music</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="crime"
+                                        name="crime"
+                                    />
+                                    <label for="crime">Crime</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="history"
+                                        name="history"
+                                    />
+                                    <label for="history">History</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="romance"
+                                        name="romance"
+                                    />
+                                    <label for="romance">Romance</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="war"
+                                        name="war"
+                                    />
+                                    <label for="war">War</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        id="western"
+                                        name="western"
+                                    />
+                                    <label for="western">Western</label>
+                                </div>
+                            </li>
+                            <input class="button-valide" type="button" value="Valider mes genres" />
                         </ul>
                     </li>
                 </ul>
