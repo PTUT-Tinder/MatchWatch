@@ -22,6 +22,7 @@
         console.log(data);
         window.localStorage.setItem("id-room", data.id);
         window.location = "voting.html?id=" + data.id;
+        window.alert("Partagez ce code à vos amis : " + data.id);
       })
       .catch((err) => console.log(err));
   }
