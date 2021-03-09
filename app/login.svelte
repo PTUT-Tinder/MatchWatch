@@ -3,6 +3,7 @@
 	import "./css/main.css";
 	import "./css/login.css";
 	import NavBar from "./components/NavBar.svelte";
+	import "./js/profile.js";
 
 	let email;
 	let password;
