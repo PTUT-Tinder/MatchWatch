@@ -61,9 +61,7 @@
     <div class="button-container">
       {#if loggedIn}
         <li>
-          <a href="signout.html" id="login" on:click={deconnexion}
-            >Se déconnecter</a
-          >
+          <a href=" " id="login" on:click={deconnexion}>Se déconnecter</a>
         </li>
       {:else}
         <li><a href="login.html" id="login">Se connecter</a></li>
