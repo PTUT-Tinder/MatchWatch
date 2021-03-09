@@ -27,6 +27,8 @@
 				console.log(data);
 				window.localStorage.setItem("username", data.username);
 				window.localStorage.setItem("mail", data.email);
+
+				location = "/";
 			})
 			.catch((err) => console.log(err));
 	}

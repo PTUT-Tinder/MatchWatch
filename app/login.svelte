@@ -3,6 +3,7 @@
 	import "./css/main.css";
 	import "./css/login.css";
 	import NavBar from "./components/NavBar.svelte";
+	import "./js/profile.js";
 
 	let email;
 	let password;
@@ -25,6 +26,8 @@
 				console.log(data);
 				window.localStorage.setItem("username", data.username);
 				window.localStorage.setItem("mail", data.email);
+
+				location = "/";
 			})
 			.catch((err) => console.log(err));
 	}
