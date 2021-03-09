@@ -4,9 +4,12 @@
 	import "./css/register.css";
 	import NavBar from "./components/NavBar.svelte";
 
-	function inscription(e) {
-		window.localStorage.setItem("username", document.getElementById("pseudo").value);
-		window.localStorage.setItem("mail", document.getElementById("mail").value);
+	let username;
+	let password;
+	let email;
+
+	function register(event) {
+		event.preventDefault();
 		
 		fetch("/api/register", {
 			method: "POST",
@@ -14,13 +17,17 @@
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
-				username: document.getElementById("pseudo").value,
-				password: document.getElementById("pwd").value,
-				email: document.getElementById("mail").value,
+				username,
+				password,
+				email,
 			}),
 		})
 			.then((res) => res.json())
-			.then((data) => console.log(data))
+			.then((data) => {
+				console.log(data);
+				window.localStorage.setItem("username", data.username);
+				window.localStorage.setItem("mail", data.email);
+			})
 			.catch((err) => console.log(err));
 	}
 </script>
@@ -31,15 +38,15 @@
 	<div class="container-global">
 		<div class="container container-register">
 			<h1>Bienvenue&nbsp;!</h1>
-			<form action="" method="">
+			<form action="" method="" on:submit={register}>
 				<label for="pseudo">Pseudo</label>
-				<input id="pseudo" name="pseudo" type="text" />
+				<input bind:value={username} id="pseudo" name="pseudo" type="text" />
 
 				<label for="mail">Adresse Mail</label>
-				<input id="mail" name="mail" type="text" />
+				<input bind:value={email} id="mail" name="mail" type="text" />
 
 				<label for="pwd">Mot de passe</label>
-				<input id="pwd" name="pwd" type="password" />
+				<input bind:value={password} id="pwd" name="pwd" type="password" />
 
 				<label for="confirmpwd">Confirmation du mot de passe</label>
 				<input id="confirmpwd" name="confirmpwd" type="password" />
@@ -47,9 +54,8 @@
 				<input
 					type="submit"
 					name="connect"
-					value="Se connecter"
+					value="S'inscrire"
 					id="register"
-					on:click={inscription}
 				/>
 			</form>
 		</div>
