@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const argon2 = require('argon2');
 const { db, User, } = require("./db");
-const code = require("./js/create-room.js");
+const code = require("./utils/create-room.js");
 
 db.sync().then(() => {
 	const app = express();
@@ -73,7 +73,7 @@ const rooms = [];
 	app.post("/api/create-room", async(req, res) => {
 		const createdRoom = {
 			id : code(),
-			members : user.get("username"),
+			members : req.body.username,
 		};
 
 		rooms.push(createdRoom);
@@ -96,10 +96,10 @@ const rooms = [];
 				id: room.get("id"),
 				members: room.get("members"),
 			});
-			Room.get("members").push(user.get("username"));
+			Room.get("members").push(req.body.username);
 		}
 
 	});
 	
-	app.listen(3000);
+	app.listen(5000);
 });
