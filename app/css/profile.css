@@ -87,3 +87,48 @@ input {
 .reccos h1 {
     margin-left: 50px;
 }
+
+li {
+    list-style:none !important;
+    color:#FFF;
+    padding:10px;
+    font-size:20px;
+    text-decoration:none;
+    }
+     
+    .genres ul {
+    background-color:none;
+    padding:0;
+    margin:0;
+    }
+     
+    .genres ul li {
+    list-style: none;
+    line-height:44px;
+    float:left;
+    background-color:none;
+    }
+     
+    .genres ul li a {
+    color:#FFF;
+    padding:10px;
+    font-size:20px;
+    text-decoration:none;
+    }
+     
+    li a:hover {
+    border-bottom:3px #FFF solid;
+    }
+    .genres ul li ul { display:none; } /* Rend le menu déroulant caché par défaut */
+     
+    .genres ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+    z-index:99999;
+    display:list-item !important;
+    position:absolute;
+    margin-top:5px;
+    margin-left:-10px;
+    }
+     
+    .genres ul li:hover ul li {
+    float:none;
+    }
