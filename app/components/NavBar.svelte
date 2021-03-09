@@ -11,6 +11,10 @@
   }
 
   const loggedIn = window.localStorage.getItem("username") != null;
+
+  function deconnexion() {
+    window.localStorage.clear();
+  }
 </script>
 
 <nav>
@@ -56,7 +60,9 @@
 
     <div class="button-container">
       {#if loggedIn}
-        <li><a href="signout.html" id="login">Se déconnecter</a></li>
+        <li>
+          <a href=" " id="login" on:click={deconnexion}>Se déconnecter</a>
+        </li>
       {:else}
         <li><a href="login.html" id="login">Se connecter</a></li>
         <li><a href="register.html" id="register">S'inscrire</a></li>
