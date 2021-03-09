@@ -8,9 +8,6 @@
   let password;
 
   function login(event) {
-    event.preventDefault();
-    event.stopPropagation();
-
     fetch("/api/login", {
       method: "POST",
       headers: {
