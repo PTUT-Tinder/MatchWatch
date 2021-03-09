@@ -17,6 +17,16 @@
   function validerGenre() {
     var genre = [...new FormData(form).keys()];
     
+    fetch("/api/genre", {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				username,
+				genre,
+			}),
+		})
     }
 
 </script>
@@ -184,6 +194,7 @@
                           name="genre"
                           value="Valider"
                           id="genre"
+                          
                         />
                       </li>
                     </ul>
