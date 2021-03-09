@@ -92,10 +92,10 @@ const rooms = [];
 			});
 		} else {
 			res.status(200).send({
-				id: room.get("id"),
-				members: room.get("members"),
+				id: room.id,
+				members: room.members,
 			});
-			Room.get("members").push(req.body.username);
+			Room.members.push(req.body.username);
 		}
 
 	});
