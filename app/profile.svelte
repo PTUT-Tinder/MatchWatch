@@ -32,7 +32,7 @@
               <ul>
                 <li>
                   <h2 class="genres">Genres préférés :</h2>
-                  <form action="" method="" on:submit={validerGenre}>
+                  <form id="formulaireGenre" action="" method="" on:submit={validerGenre}>
                     <ul>
                       <li>
                         <div>
