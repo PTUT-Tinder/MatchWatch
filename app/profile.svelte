@@ -32,7 +32,7 @@
               <ul>
                 <li>
                   <h2 class="genres">Genres préférés :</h2>
-                  <form action="" method="get">
+                  <form action="" method="" on:submit={validerGenre}>
                     <ul>
                       <li>
                         <div>
@@ -171,9 +171,15 @@
                           <input type="checkbox" id="western" name="western" />
                           <label for="western">Western</label>
                         </div>
+                        <input
+                          class="button-valide"
+                          type="submit"
+                          name="genre"
+                          value="Valider"
+                          id="genre"
+                        />
                       </li>
                     </ul>
-                    <button class="button-valide">Valider mes genres</button>
                   </form>
                 </li>
               </ul>
