@@ -7,8 +7,8 @@
   document.addEventListener("DOMContentLoaded", (event) => {
     if (document.cookie != null) {
       let username = document.getElementById("pseudo");
-      username.textContent = document.cookie.split(";")[0].split("=")[1];
       let mail = document.getElementById("mail");
+      username.textContent = document.cookie.split(";")[0].split("=")[1];
       mail.textContent = document.cookie.split(";")[1].split("=")[1];
     }
   });
@@ -25,8 +25,8 @@
           <img src="" alt="" />
         </div>
         <div class="text">
-          <h1 class="pseudo">Julien Lacroix</h1>
-          <h2 class="mail">mail@example.com</h2>
+          <h1 class="pseudo" id="pseudo">Julien Lacroix</h1>
+          <h2 class="mail" id="mail">mail@example.com</h2>
 
           <div class="genres">
             <ul>
@@ -56,11 +56,6 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="text">
-        <h1 class="pseudo" id="pseudo">Julien Lacroix</h1>
-        <h2 class="mail" id="mail">mail@example.com</h2>
-        <h2 class="genres" id="genres">Genres préférés :</h2>
       </div>
     </div>
 
