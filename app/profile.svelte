@@ -68,7 +68,9 @@
                                         id="science-fiction"
                                         name="science-fiction"
                                     />
-                                    <label for="science-fiction">Science Fiction</label>
+                                    <label for="science-fiction"
+                                        >Science Fiction</label
+                                    >
                                 </div>
                             </li>
                             <li>
@@ -211,8 +213,12 @@
                                     <label for="western">Western</label>
                                 </div>
                             </li>
-                            <input class="button-valide" type="button" value="Valider mes genres" />
                         </ul>
+                        <input
+                            class="button-valide"
+                            type="button"
+                            value="Valider mes genres"
+                        />
                     </li>
                 </ul>
             </div>
