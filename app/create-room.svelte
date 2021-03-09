@@ -3,9 +3,28 @@
   import "./css/main.css";
   import "./css/create-room.css";
   import NavBar from "./components/NavBar.svelte";
-  import { creerCode } from "../src/utils/create-room.js";
 
-  function createRoom() {}
+  let username;
+
+  function createRoom(event) {
+    console.log("ok");
+    fetch("/api/create-room", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        window.localStorage.setItem("id-room", data.id);
+        window.location = "voting.html?id=" + data.id;
+      })
+      .catch((err) => console.log(err));
+  }
 </script>
 
 <NavBar />
@@ -15,10 +34,16 @@
     <div class="ensemble">
       <div class="zone-bleu">
         <h1 class="bienvenue">Bienvenue&nbsp;!</h1>
-        <form action="">
+        <form action="" method="" on:submit={createRoom}>
           <div>
             <h2>Choisissez votre nom, il sera affiché aux autres</h2>
-            <input class="input-nom" type="text" id="name" name="name" />
+            <input
+              class="input-nom"
+              type="text"
+              id="name"
+              name="name"
+              bind:value={username}
+            />
           </div>
           <p>Un salon sera créé, ainsi qu’un code de 6 caractères.</p>
           <p>
@@ -26,12 +51,7 @@
             le salon, et vous pourrez choisir un film ensemble
           </p>
           <div class="position-bouton-suivant">
-            <input
-              class="bouton-suivant"
-              type="submit"
-              value="Suivant"
-              on:click={creerCode}
-            />
+            <input class="bouton-suivant" type="submit" value="Suivant" />
           </div>
         </form>
         <div class="position-lien">

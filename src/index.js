@@ -83,10 +83,9 @@ const rooms = [];
 		};
 
 		rooms.push(createdRoom);
-	
 		res.status(200).send({
-			id: createdRoom.get("id"),
-			members: createdRoom.get("members")
+			id: createdRoom.id,
+			members: createdRoom.members
 		});
 	});
 
@@ -99,10 +98,10 @@ const rooms = [];
 			});
 		} else {
 			res.status(200).send({
-				id: room.get("id"),
-				members: room.get("members"),
+				id: room.id,
+				members: room.members,
 			});
-			Room.get("members").push(req.body.username);
+			Room.members.push(req.body.username);
 		}
 
 	});

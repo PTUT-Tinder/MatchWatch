@@ -1,5 +1,5 @@
 
-function makeid() {
+module.exports = function makeid() {
 	var text = "";
 	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -7,10 +7,4 @@ function makeid() {
 		text += possible.charAt(Math.floor(Math.random() * possible.length));
 
 	return text;
-}
-
-module.exports = function creerCode(){
-	var code;
-	code = makeid();
-	window.alert(code);
 }
