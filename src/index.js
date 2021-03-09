@@ -77,10 +77,9 @@ const rooms = [];
 		};
 
 		rooms.push(createdRoom);
-	
 		res.status(200).send({
-			id: createdRoom.get("id"),
-			members: createdRoom.get("members")
+			id: createdRoom.id,
+			members: createdRoom.members
 		});
 	});
 
