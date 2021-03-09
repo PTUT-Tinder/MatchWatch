@@ -4,9 +4,12 @@
 	import "./css/login.css";
 	import NavBar from "./components/NavBar.svelte";
 
-	function connexion(e) {
-		e.preventDefault();
-		e.stopPropagation();
+	let email;
+	let password;
+
+	function login(event) {
+		event.preventDefault();
+		event.stopPropagation();
 
 		fetch("/api/login", {
 			method: "POST",
@@ -14,15 +17,15 @@
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
-				password: document.getElementById("pwd").value,
-				email: document.getElementById("mail").value,
+				email,
+				password,
 			}),
 		})
 			.then((res) => res.json())
 			.then((data) => {
 				console.log(data);
-				window.localStorage.setItem("username", data["username"]);
-				window.localStorage.setItem("mail", data["email"]);
+				window.localStorage.setItem("username", data.username);
+				window.localStorage.setItem("mail", data.email);
 			})
 			.catch((err) => console.log(err));
 	}
@@ -34,18 +37,17 @@
 	<div class="container-global">
 		<div class="container container-login">
 			<h1>Bienvenue&nbsp;!</h1>
-			<form action="" method="">
+			<form action="" method="" on:submit={login}>
 				<label for="mail">Adresse Email</label>
-				<input id="mail" name="mail" type="text" />
+				<input bind:value={email} id="mail" name="mail" type="text" />
 
 				<label for="pwd">Mot de Passe</label>
-				<input id="pwd" name="pwd" type="password" />
+				<input bind:value={password} id="pwd" name="pwd" type="password" />
 
 				<input
 					type="submit"
 					name="connect"
 					value="Se connecter"
-					on:click={connexion}
 				/>
 			</form>
 		</div>
