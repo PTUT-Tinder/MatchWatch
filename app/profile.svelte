@@ -23,7 +23,7 @@
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
-				username,
+				username:window.localStorage.getItem("username"),
 				genre,
 			}),
 		})

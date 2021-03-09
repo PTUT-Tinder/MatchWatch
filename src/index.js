@@ -67,11 +67,12 @@ db.sync().then(() => {
 		}
 	});
 	app.patch("/api/genre", async (req, res) => {
-		const user = await User.update({
+		const user = await User.update({genre: res.body.genre.join(", ")}, {
 			where: {
-				genre:null
+				username:req.body.username,
 			}
-		})
+		});
+		res.status(204).send();
 	});
 
 const rooms = [];
