@@ -66,7 +66,13 @@ db.sync().then(() => {
 			});
 		}
 	});
-
+	app.patch("/api/genre", async (req, res) => {
+		const user = await User.update({
+			where: {
+				genre:null
+			}
+		})
+	});
 
 const rooms = [];
 

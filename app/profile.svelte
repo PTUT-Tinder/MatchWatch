@@ -12,6 +12,23 @@
       mail: window.localStorage.getItem("mail"),
     };
   }
+
+  let form;
+  function validerGenre() {
+    var genre = [...new FormData(form).keys()];
+    
+    fetch("/api/genre", {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				username,
+				genre,
+			}),
+		})
+    }
+
 </script>
 
 <NavBar />
@@ -32,7 +49,7 @@
               <ul>
                 <li>
                   <h2 class="genres">Genres préférés :</h2>
-                  <form id="formulaireGenre" action="" method="" on:submit={validerGenre}>
+                  <form id="formulaireGenre" action="" method="" on:submit={validerGenre} bind:this={form}>
                     <ul>
                       <li>
                         <div>
@@ -177,6 +194,7 @@
                           name="genre"
                           value="Valider"
                           id="genre"
+                          
                         />
                       </li>
                     </ul>

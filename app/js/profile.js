@@ -1,6 +1,6 @@
-function genrePreferer() {
-    var genres= document.getElementById("formulaireGenre").value; 
+function validerGenre() {
+    var inputs = document.getElementById("genre").elements;
     
-    alert(genres);
+    window.alert(inputs);
     
     }
