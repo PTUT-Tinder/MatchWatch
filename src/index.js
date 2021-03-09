@@ -71,8 +71,8 @@ db.sync().then(() => {
 			where: {
 				genre:null
 			}
-		}
-	}
+		})
+	});
 
 const rooms = [];
 
