@@ -16,7 +16,6 @@
 
   let form;
   let genre;
-
   
   function validerGenre() {
     genre = [...new FormData(form).keys()];
