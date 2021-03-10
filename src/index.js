@@ -66,8 +66,9 @@ db.sync().then(() => {
 			});
 		}
 	});
+
 	app.patch("/api/genre", async (req, res) => {
-		const user = await User.update({genre: res.body.genre.join(", ")}, {
+		await User.update({genre: res.body.genre.join(", ")}, {
 			where: {
 				username:req.body.username,
 			}
@@ -75,19 +76,16 @@ db.sync().then(() => {
 		res.status(204).send();
 	});
 
-const rooms = [];
+	const rooms = [];
 
 	app.post("/api/create-room", async(req, res) => {
 		const createdRoom = {
 			id : code(),
-			members : req.body.username,
+			members : [req.body.username],
 		};
 
 		rooms.push(createdRoom);
-		res.status(200).send({
-			id: createdRoom.id,
-			members: createdRoom.members
-		});
+		res.status(200).send(createdRoom);
 	});
 
 	app.post("/api/join-room", async(req, res) => {
@@ -99,13 +97,8 @@ const rooms = [];
 			});
 		} else {
 			room.members.push(req.body.username);
-			res.status(200).send({
-				id: req.body.id,
-				members: room.members,
-			});
-			
+			res.status(200).send(room);
 		}
-
 	});
 	
 	app.listen(5000);
