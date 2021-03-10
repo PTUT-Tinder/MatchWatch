@@ -13,6 +13,6 @@
   <div class="container-films" />
 
   <div class="reroll">
-    <button>Reroll</button>
+    <button>Validate</button>
   </div>
 </main>
