@@ -3,30 +3,59 @@ import $ from "jquery";
 $(document).ready(function(){
 
     let filmsSelect = [];
-    let countclick = 5;
+    let countclick = 10;
+    let genres = [
+        'Action',
+        'Comedy',
+        'Fantasy',
+        'Adventure',
+        'Science Fiction',
+        'Thriller',
+        'Horror',
+        'Animation',
+        'Family',
+        'Documentary',
+        'Mystery',
+        'Drama',
+        'TV Movie',
+        'Music',
+        'Crime',
+        'History',
+        'Romance',
+        'War',
+        'Western',
+        'No genre'
+      ];
+      let countgenre =0;
+      let preSelectFilm = [];
+      let genreSelect = [];
 
     $.getJSON("../json/movies.json", function(data){
         
         let nbRoll;
 
-        for(let i=0;i<6;i++){
-            createElements(data);
-
+        for(let i=0;i<5;i++){
+                createGenres(i);            
         }
 
         $(".reroll button").click(function(evt){
             countclick--;
 
-            match();
-
             $(".select").each(function(){
-                filmsSelect.push({
-                    titre : $(this).children("h3").text(),
-                    img : $(this).children("img").attr("src")
-                });
+                if(countclick< 7){
+                    filmsSelect.push({
+                        titre : $(this).children("h3").text(),
+                        img : $(this).children("img").attr("src")
+                    });
+                }else{
+                    genreSelect.push($(this).children().text());
+                }
+                
+                
             });
 
             console.log(filmsSelect);
+            console.log(genreSelect);
             
 
             $(".div").remove();
@@ -35,11 +64,13 @@ $(document).ready(function(){
 
 
             if(countclick>0){
-                for(let i=0;i<6;i++){
-                
+                for(let i=0;i<5;i++){
+                if(countclick< 7){
                     createElements(data);
-    
+                }else{
+                    createGenres(i);
                 }
+            }
             }else{
                 $(".div").remove();
                 $(".reroll button").remove();
@@ -52,6 +83,24 @@ $(document).ready(function(){
 
     });
 
+function createGenres(evt){
+    let div = $("<div></div>");
+    let titre = $("<h3></h3>");
+
+    div.addClass("div");
+    titre.addClass("h3");
+
+    div.append(titre);
+
+        titre.text(genres[countgenre]);
+
+    $(".container-films").append(div);
+
+    div.click(function(){
+        $(this).toggleClass("select");
+    });
+    countgenre ++;
+}
     
 function createElements(evt){
     let div = $("<div></div>");
@@ -60,19 +109,35 @@ function createElements(evt){
     let button = $("<button></button>");
     let span = $("<span></span>");
     
-    
-
     let random = Math.floor(Math.random() * evt.length);
     
+    for(let i=0;i<genreSelect.length;i++){
+        if(evt[random].genres == null)
+        {
+            while(!evt[random].genres.includes(genreSelect[i])){
+                random = Math.floor(Math.random() * evt.length);
+            };
+            if(evt[random].genres.includes(genreSelect[i])){
+                console.log(evt[random].genres);
+                img.attr("src",evt[random]["poster"]);
+                img.attr("data-id",evt[random]);
+                titre.text(evt[random]["title"]);
+            }
+        }else{
+            console.log(evt[random].genres);
+                img.attr("src",evt[random]["poster"]);
+                img.attr("data-id",evt[random]);
+                titre.text(evt[random]["title"]);
+        }
+        
+    }
     
     div.addClass("div");
     img.addClass("img");
     titre.addClass("h3");
     button.addClass("button");
     
-    img.attr("src",evt[random]["poster"]);
-    img.attr("data-id",evt[random]);
-    titre.text(evt[random]["title"]);
+    
     span.text("i");
            
     button.append(span);
