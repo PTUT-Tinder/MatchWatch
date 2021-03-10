@@ -27,7 +27,6 @@ $(document).ready(function(){
         'No genre'
       ];
       let countgenre =0;
-      let preSelectFilm = [];
       let genreSelect = [];
 
     $.getJSON("../json/movies.json", function(data){
@@ -42,7 +41,7 @@ $(document).ready(function(){
             countclick--;
 
             $(".select").each(function(){
-                if(countclick< 7){
+                if(countclick< 6){
                     filmsSelect.push({
                         titre : $(this).children("h3").text(),
                         img : $(this).children("img").attr("src")
