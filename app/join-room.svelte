@@ -38,7 +38,7 @@
         <h1 class="bienvenue">Bienvenue&nbsp;!</h1>
         <form action="" method="" on:submit={joinRoom}>
           <div>
-            <h2>Entrez le nom que vous voulez emprunté :</h2>
+            <h2>Entrez le nom que vous voulez emprunter :</h2>
             <input
               class="input-nom"
               type="text"
