@@ -50,7 +50,7 @@
           <div class="genres">
             <ul class="zone-genre">
               <li>
-                <h2 class="genres">Genres préférés :</h2>
+                <h2 class="genres">Genres préférés : </h2>
                 <form
                   id="formulaireGenre"
                   action=""
@@ -209,7 +209,7 @@
       </div>
 
       <div class="reccos">
-        <h1>Recomandations</h1>
+        <h1>A regarder plus tard</h1>
       </div>
     </div>
   {:else}
