@@ -56,6 +56,17 @@ input {
 
 .informations {
     margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categorie-informations{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #282e3e71;
 }
 
 .informations .pp {
@@ -96,10 +107,17 @@ li {
     text-decoration: none;
 }
 
+.genres{
+    margin-left: 20px;
+}
+
+
 .genres ul {
     background-color: none;
     padding: 0;
     margin: 0;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .genres ul li {
@@ -118,6 +136,7 @@ li {
 
 
 .button-valide {
+    display: flex;
     padding: 10px 20px;
     /* Red */
     background: #EF3340;
@@ -134,6 +153,7 @@ li {
     line-height: 28px;
 
     color: #FFFFFF;
+    justify-content: end;
 }
 
 .logged-out {
@@ -141,4 +161,8 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.infoPrincipal{
+    display: flex;
 }
