@@ -44,6 +44,7 @@ html {
 .div {
   width: 250px;
   height: auto;
+  min-height: 350px;
   margin: 30px;
   padding: 10px;
   border: 3px solid #474747;
