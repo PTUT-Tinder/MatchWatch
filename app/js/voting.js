@@ -17,6 +17,8 @@ $(document).ready(function(){
         $(".reroll button").click(function(evt){
             countclick--;
 
+            match();
+
             $(".select").each(function(){
                 filmsSelect.push({
                     titre : $(this).children("h3").text(),
@@ -87,7 +89,15 @@ function createElements(evt){
     button.click(function(){
         let div2 = $("<div></div>");
         let p = $("<p></p>");
+        
+
         $(this).toggleClass("button-select");
+        
+        if($(this).hasClass("select")){
+            $(this).parent().addClass("select");
+        }else{
+            $(this).parent().removeClass("select");
+        }
 
         if($(this).children(span).text() == "i"){
             $(this).children(span).text("X");
@@ -99,10 +109,16 @@ function createElements(evt){
             div2.append(p);
             div.append(div2);
             div.append($(this));
+
+            
+
         }else{
+            
             $(this).children(span).text("i");
             $(this).parent().children(".div2").remove();
         }
+
+        
     });
 }
 
@@ -142,6 +158,23 @@ function getResult(evt){
 
     divPrincipale.prepend(h1);
     $(".container-films").prepend(divPrincipale);
+}
+
+function match(e){
+    let div = $("<div></div>");
+    let img = $("<img/>");
+    let h3 = $("<h3></h3>");
+
+    let main = $("main");
+
+    div.addClass("match");
+
+    h3.text("It's a Match !");
+
+    div.append(img);
+    div.append(h3);
+
+    main.prepend(div);
 }
 
 });
