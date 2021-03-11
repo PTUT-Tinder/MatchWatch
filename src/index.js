@@ -67,13 +67,37 @@ db.sync().then(() => {
 		}
 	});
 
+	app.post("/api/modify", async (req, res) => {
+		const user = await User.update({username: req.body.newUsername,
+		email: req.body.newEmail
+		}, {
+			where: {
+				username: req.body.oldUsername,
+				email: req.body.oldEmail
+			},
+		});
+
+		res.status(204).send();
+	});
+
 	app.patch("/api/genre", async (req, res) => {
-		await User.update({genre: res.body.genre.join(", ")}, {
+		await User.update({genre: req.body.genre.join(", ")}, {
 			where: {
 				username:req.body.username,
 			}
 		});
-		res.status(204).send();
+	});
+
+	app.get("/api/genre/:username", async (req, res) => {
+		const user = await User.findOne({
+			where: {
+				username: req.params.username,
+			},
+		});
+		console.log(user.get("genre"));
+		res.status(200).send({
+			genre : user.get("genre").split(", "),
+		});
 	});
 
 	const rooms = [];
