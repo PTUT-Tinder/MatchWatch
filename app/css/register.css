@@ -115,7 +115,6 @@ main {
     font-weight: bold;
     border: 2px solid white;
     transition: 0.2s;
-    margin: 10px;
     margin-left: 25%;
     transform: translateX(-50%);
     
