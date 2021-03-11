@@ -98,9 +98,40 @@ main {
     margin-bottom: 100px;
 }
 
-.container-login a {
+.container-login #about {
     text-decoration: none;
     color: #ef3340;
+}
+.container-login #login{
+    text-decoration: none;
+    display: flex;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: 0.2s;
+    margin-left: 25%;
+    transform: translateX(-50%);
+    
+}
+
+.container-login #login:hover {
+    text-decoration: none;
+    display: flex;
+    color: white;
+    padding: 20px;
+    background: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .container-login #inscr {
@@ -145,3 +176,7 @@ input {
     font-size: 15px;
     padding-left: 10px;
 }
+
+
+
+
