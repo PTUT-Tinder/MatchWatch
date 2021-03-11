@@ -10,6 +10,7 @@
 
 	function register(event) {
 		event.preventDefault();
+
 		fetch("/api/register", {
 			method: "POST",
 			headers: {
@@ -21,9 +22,21 @@
 				email,
 			}),
 		})
-			.then((res) => res.json())
-			.then((data) => {
-				console.log(data);
+			.then(async (res) => {
+				const data = await res.json();
+				
+				if (!res.ok) {
+					if (typeof data.error == "string") {
+						alert(data.error);
+					} else if (Array.isArray(data.error)) {
+						alert(data.error.map(err => `- ${err}`).join("\n"));
+					} else {
+						alert("unknown error");
+					}
+
+					return;
+				}
+
 				window.localStorage.setItem("username", data.username);
 				window.localStorage.setItem("mail", data.email);
 
