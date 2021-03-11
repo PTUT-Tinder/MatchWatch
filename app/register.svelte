@@ -59,7 +59,7 @@
       <h1>Vous êtes déjà inscrit&nbsp;?</h1>
       <p>
         Le compte MatchWatch est optionnel, mais il vous offre de nombreux
-        avantages&nbsp;! <a href="/TODO">En savoir plus</a>
+        avantages&nbsp;! <a id="about" href="/about.html">En savoir plus</a>
       </p>
       <a href="login.html" id="login">Se connecter</a>
     </div>
