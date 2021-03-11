@@ -9,6 +9,7 @@
   let email;
 
   function register(event) {
+    event.preventDefault();
     fetch("/api/register", {
       method: "POST",
       headers: {
