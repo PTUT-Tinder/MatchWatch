@@ -1,222 +1,182 @@
 <script>
-  import "font-awesome/css/font-awesome.min.css";
-  import "./css/main.css";
-  import "./css/profile.css";
-  import NavBar from "./components/NavBar.svelte";
+	import "font-awesome/css/font-awesome.min.css";
+	import "./css/main.css";
+	import "./css/profile.css";
+	import NavBar from "./components/NavBar.svelte";
+	import "./js/profile.js";
+	import { text } from "svelte/internal";
 
-  let user;
+	let user;
+	let editing = false;
+	let genrePerso;
 
-  if (window.localStorage.getItem("username")) {
-    user = {
-      pseudo: window.localStorage.getItem("username"),
-      mail: window.localStorage.getItem("mail"),
-      genre: window.localStorage.getItem("genre"),
-    };
-  }
+	if (window.localStorage.getItem("username")) {
+		user = {
+			pseudo: window.localStorage.getItem("username"),
+			mail: window.localStorage.getItem("mail"),
+			genre: genrePerso,
+		};
+	}
 
-  let form;
-  let genre;
-  
-  function validerGenre() {
-    genre = [...new FormData(form).keys()];
+	let form;
+	let genre;
 
-    fetch("/api/genre", {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: window.localStorage.getItem("username"),
-        genre,
-      }),
-    });
-  }
+	function validerGenre(event) {
+		event.preventDefault();
+		genre = [...new FormData(form).keys()];
+		console.log(genre);
+		fetch("/api/genre", {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				username: window.localStorage.getItem("username"),
+				genre,
+			}),
+		});
+	}
+
+	function changeInfos(event) {
+		event.preventDefault();
+
+		editing = !editing;
+		if (editing) {
+			return;
+		}
+
+		fetch("/api/modify", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				newUsername: user.pseudo,
+				oldUsername: window.localStorage.getItem("username"),
+				newEmail: user.mail,
+				oldEmail: window.localStorage.getItem("mail"),
+			}),
+		})
+			.then(() => {
+				window.localStorage.setItem("username", user.pseudo);
+				window.localStorage.setItem("mail", user.mail);
+			})
+			.catch((err) => console.log(err));
+	}
+	const genresList = [
+		"Action",
+		"Comedy",
+		"Fantasy",
+		"Adventure",
+		"Science Fiction",
+		"Thriller",
+		"Horror",
+		"Animation",
+		"Family",
+		"Documentary",
+		"Mystery",
+		"Drama",
+		"TV Movie",
+		"Music",
+		"Crime",
+		"History",
+		"Romance",
+		"War",
+		"Western",
+	];
+
+	fetch("/api/genre/" + user.pseudo)
+		.then((res) => res.json())
+		.then((data) => {
+			user.genre = data.genre;
+			console.log(genrePerso);
+		})
+		.catch((err) => console.log(err));
 </script>
 
 <NavBar />
 <main>
-  {#if user != null}
-    <div class="informations">
-      <div>
-        <img src="" alt="" />
-        <div class="categorie-informations">
-          <div class="infoPrincipal">
-            <div class="pp">
-              <img src="" alt="" />
-            </div>
-            <div class="text">
-              <h1 class="pseudo">{user.pseudo}</h1>
-              <h2 class="mail">{user.mail}</h2>
-            </div>
-          </div>
-          <div class="genres">
-            <ul class="zone-genre">
-              <li>
-                <h2 class="genres">Genres préférés :{user.genre}</h2>
-                <form
-                  id="formulaireGenre"
-                  action=""
-                  method=""
-                  on:submit={validerGenre}
-                  bind:this={form}
-                >
-                  <ul>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="action" name="action" />
-                        <label for="action">Action</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="comedy" name="comedy" />
-                        <label for="comedy">Comedy</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="fantasy" name="fantasy" />
-                        <label for="fantasy">Fantasy</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input
-                          type="checkbox"
-                          id="adventure"
-                          name="adventure"
-                        />
-                        <label for="adventure">Adventure</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input
-                          type="checkbox"
-                          id="science-fiction"
-                          name="science-fiction"
-                        />
-                        <label for="science-fiction">Science Fiction</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="thriller" name="thriller" />
-                        <label for="thriller">Thriller</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="horror" name="horror" />
-                        <label for="horror">Horror</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input
-                          type="checkbox"
-                          id="animation"
-                          name="animation"
-                        />
-                        <label for="animation">Animation</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="family" name="family" />
-                        <label for="family">Family</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input
-                          type="checkbox"
-                          id="documentary"
-                          name="documentary"
-                        />
-                        <label for="documentary">Documentary</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="mystery" name="mystery" />
-                        <label for="mystery">Mystery</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="drama" name="drama" />
-                        <label for="drama">Drama</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="tv-movie" name="tv-movie" />
-                        <label for="tv-movie">TV Movie</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="music" name="music" />
-                        <label for="music">Music</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="crime" name="crime" />
-                        <label for="crime">Crime</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="history" name="history" />
-                        <label for="history">History</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="romance" name="romance" />
-                        <label for="romance">Romance</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="war" name="war" />
-                        <label for="war">War</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <input type="checkbox" id="western" name="western" />
-                        <label for="western">Western</label>
-                      </div>
-                    </li>
-                  </ul>
-                  <input
-                    class="button-valide"
-                    type="submit"
-                    name="genre"
-                    value="Valider"
-                    id="genre"
-                  />
-                </form>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+	{#if user != null}
+		<div class="informations">
+			<div>
+				<img src="" alt="" />
+				<div class="categorie-informations">
+					<div class="infoPrincipal">
+						<div class="pp">
+							<img src="" alt="" />
+						</div>
+						<div class="text">
+							<form action="" method="" on:submit={changeInfos}>
+								{#if editing}
+									<input type="text" bind:value={user.pseudo} />
+								{:else}
+									<h1 class="pseudo">{user.pseudo}</h1>
+								{/if}
 
-      <div class="lastviews">
-        <h1>Derniers vus</h1>
-      </div>
+								<input type="submit" value="" class="icon" />
+							</form>
+							<form action="" method="" on:submit={changeInfos}>
+								{#if editing}
+									<input type="text" bind:value={user.mail} />
+								{:else}
+									<h2 class="mail">{user.mail}</h2>
+								{/if}
 
-      <div class="reccos">
-        <h1>A regarder plus tard</h1>
-      </div>
-    </div>
-  {:else}
-    <div class="logged-out">Vous n'êtes pas connecté</div>
-  {/if}
+								<input type="submit" value="" class="icon" />
+							</form>
+						</div>
+					</div>
+					<div class="genres">
+						<ul class="zone-genre">
+							<li>
+								<h2 class="genres">Genres préférés :</h2>
+								<form
+									id="formulaireGenre"
+									action=""
+									method=""
+									on:submit={validerGenre}
+									bind:this={form}
+								>
+									<ul>
+										{#each genresList as genre}
+											<li>
+												<div>
+													<input
+														type="checkbox"
+														id={genre}
+														name={genre}
+														checked={user.genre?.includes(genre)}
+													/>
+													<label for={genre}>{genre}</label>
+												</div>
+											</li>
+										{/each}
+									</ul>
+									<input
+										class="button-valide"
+										type="submit"
+										name="genre"
+										value="Valider"
+										id="genre"
+									/>
+								</form>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="lastviews">
+				<h1>Derniers vus</h1>
+			</div>
+
+			<div class="reccos">
+				<h1>A regarder plus tard</h1>
+			</div>
+		</div>
+	{:else}
+		<div class="logged-out">Vous n'êtes pas connecté</div>
+	{/if}
 </main>
 
 <footer />
