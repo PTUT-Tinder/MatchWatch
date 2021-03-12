@@ -3,26 +3,52 @@
 	import "./css/main.css";
 	import "./css/join-room.css";
 	import NavBar from "./components/NavBar.svelte";
+	import handleErrors from "./js/handle-errors";
 
-	let username, id;
+	let displayName;
+	let roomId;
 
-	function joinRoom(event) {
+	async function joinRoom(event) {
 		event.preventDefault();
 
-		fetch("/api/join-room", {
+		if (window.localStorage.getItem("token") == null) {
+			await fetch("/api/create-temp-user", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					username: displayName,
+				}),
+			})
+				.then(async (res) => {
+					const data = await res.json();
+
+					handleErrors(res, data);
+
+					window.localStorage.setItem("token", data.token);
+				})
+		}
+
+		await fetch("/api/join-room", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
+				"Authorization": window.localStorage.getItem("token"),
 			},
 			body: JSON.stringify({
-				id,
-				username,
+				id: roomId,
+				displayName,
 			}),
 		})
-			.then((res) => res.json())
-			.then((data) => {
+			.then(async (res) => {
+				const data = await res.json();
+
+				handleErrors(res, data);
+
 				console.log(data);
-				window.localStorage.setItem("id-room", data.id);
+				console.log(data);
+				window.localStorage.setItem("room-id", data.id);
 				window.location = "voting.html?id=" + data.id;
 			})
 			.catch((err) => console.log(err));
@@ -44,7 +70,7 @@
 							type="text"
 							id="name"
 							name="name"
-							bind:value={username}
+							bind:value={displayName}
 						/>
 					</div>
 					<div>
@@ -54,7 +80,7 @@
 							type="text"
 							id="id"
 							name="id"
-							bind:value={id}
+							bind:value={roomId}
 						/>
 					</div>
 					<p>Entrez le code à 6 caractères fourni.</p>

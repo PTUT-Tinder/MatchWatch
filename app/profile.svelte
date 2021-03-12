@@ -4,40 +4,44 @@
 	import "./css/profile.css";
 	import NavBar from "./components/NavBar.svelte";
 	import "./js/profile.js";
-	import { text } from "svelte/internal";
+	import handleErrors from "./js/handle-errors";
 
 	let user;
 	let editing = false;
-	let genrePerso;
-
-	if (window.localStorage.getItem("username")) {
-		user = {
-			pseudo: window.localStorage.getItem("username"),
-			mail: window.localStorage.getItem("mail"),
-			genre: genrePerso,
-		};
-	}
-
 	let form;
 	let genre;
 
-	function validerGenre(event) {
-		event.preventDefault();
-		genre = [...new FormData(form).keys()];
-		console.log(genre);
-		fetch("/api/genre", {
+	function saveChanges() {
+		return fetch("/api/user/@me", {
 			method: "PATCH",
 			headers: {
 				"Content-Type": "application/json",
+				"Authorization": window.localStorage.getItem("token"),
 			},
 			body: JSON.stringify({
-				username: window.localStorage.getItem("username"),
-				genre,
+				email: user.email,
+				username: user.username,
+				favoriteGenres: user.favoriteGenres,
 			}),
-		});
+		})
+			.then(async (res) => {
+				const data = await res.json();
+
+				handleErrors(res, data);
+
+				user = data;
+			})
+			.catch((err) => console.log(err));
 	}
 
-	function changeInfos(event) {
+	function genreSubmit(event) {
+		event.preventDefault();
+		user.favoriteGenres = [...new FormData(form).keys()];
+		
+		return saveChanges();
+	}
+
+	function formSubmit(event) {
 		event.preventDefault();
 
 		editing = !editing;
@@ -45,24 +49,9 @@
 			return;
 		}
 
-		fetch("/api/modify", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				newUsername: user.pseudo,
-				oldUsername: window.localStorage.getItem("username"),
-				newEmail: user.mail,
-				oldEmail: window.localStorage.getItem("mail"),
-			}),
-		})
-			.then(() => {
-				window.localStorage.setItem("username", user.pseudo);
-				window.localStorage.setItem("mail", user.mail);
-			})
-			.catch((err) => console.log(err));
+		return saveChanges();
 	}
+
 	const genresList = [
 		"Action",
 		"Comedy",
@@ -85,13 +74,21 @@
 		"Western",
 	];
 
-	fetch("/api/genre/" + user.pseudo)
-		.then((res) => res.json())
-		.then((data) => {
-			user.genre = data.genre;
-			console.log(genrePerso);
+	if (window.localStorage.getItem("token") != null) {
+		fetch("/api/user/@me", {
+			headers: {
+				Authorization: window.localStorage.getItem("token"),
+			},
 		})
-		.catch((err) => console.log(err));
+			.then(async (res) => {
+				const data = await res.json();
+
+				handleErrors(res, data);
+
+				user = data;
+			})
+			.catch((err) => console.log(err));
+	}
 </script>
 
 <NavBar />
@@ -106,20 +103,20 @@
 							<img src="" alt="" />
 						</div>
 						<div class="text">
-							<form action="" method="" on:submit={changeInfos}>
+							<form action="" method="" on:submit={formSubmit}>
 								{#if editing}
-									<input type="text" bind:value={user.pseudo} />
+									<input type="text" bind:value={user.username} />
 								{:else}
-									<h1 class="pseudo">{user.pseudo}</h1>
+									<h1 class="pseudo">{user.username}</h1>
 								{/if}
 
 								<input type="submit" value="" class="icon" />
 							</form>
-							<form action="" method="" on:submit={changeInfos}>
+							<form action="" method="" on:submit={formSubmit}>
 								{#if editing}
-									<input type="text" bind:value={user.mail} />
+									<input type="text" bind:value={user.email} />
 								{:else}
-									<h2 class="mail">{user.mail}</h2>
+									<h2 class="mail">{user.email}</h2>
 								{/if}
 
 								<input type="submit" value="" class="icon" />
@@ -134,7 +131,7 @@
 									id="formulaireGenre"
 									action=""
 									method=""
-									on:submit={validerGenre}
+									on:submit={genreSubmit}
 									bind:this={form}
 								>
 									<ul>
@@ -145,7 +142,7 @@
 														type="checkbox"
 														id={genre}
 														name={genre}
-														checked={user.genre?.includes(genre)}
+														checked={user.favoriteGenres?.includes(genre)}
 													/>
 													<label for={genre}>{genre}</label>
 												</div>

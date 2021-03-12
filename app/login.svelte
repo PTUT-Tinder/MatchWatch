@@ -4,6 +4,7 @@
 	import "./css/login.css";
 	import NavBar from "./components/NavBar.svelte";
 	import "./js/profile.js";
+	import handleErrors from "./js/handle-errors";
 
 	let email;
 	let password;
@@ -24,20 +25,9 @@
 			.then(async (res) => {
 				const data = await res.json();
 				
-				if (!res.ok) {
-					if (typeof data.error == "string") {
-						alert(data.error);
-					} else if (Array.isArray(data.error)) {
-						alert(data.error.map(err => `- ${err}`).join("\n"));
-					} else {
-						alert("unknown error");
-					}
+				handleErrors(res, data);
 
-					return;
-				}
-
-				window.localStorage.setItem("username", data.username);
-				window.localStorage.setItem("mail", data.email);
+				window.localStorage.setItem("token", data.token);
 
 				location = "/";
 			})

@@ -10,7 +10,7 @@
     open = !open;
   }
 
-  const loggedIn = window.localStorage.getItem("username") != null;
+  const loggedIn = window.localStorage.getItem("token") != null;
 
   function deconnexion() {
     window.localStorage.clear();
