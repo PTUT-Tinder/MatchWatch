@@ -76,7 +76,7 @@
 						People will use this code to join your room, so you will choose a movie together.
 					</p>
 					<div class="position-bouton-suivant">
-						<input class="bouton-suivant" type="submit" value="Suivant" />
+						<input class="bouton-suivant" type="submit" value="Next" />
 					</div>
 				</form>
 				<div class="position-lien">
