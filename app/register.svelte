@@ -62,10 +62,9 @@
 		<div class="container container-login">
 			<h1>Already registered?</h1>
 			<p>
-				Le compte MatchWatch est optionnel, mais il vous offre de nombreux
-				avantages&nbsp;! <a id="about" href="/about.html">En savoir plus</a>
+				A MatchWatch account is optionnal, but gives you great advantages ! <a id="about" href="/about.html">More</a>
 			</p>
-			<a href="login.html" id="login">Se connecter</a>
+			<a href="login.html" id="login">Log in</a>
 		</div>
 	</div>
 </main>

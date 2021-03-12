@@ -153,7 +153,7 @@
 										class="button-valide"
 										type="submit"
 										name="genre"
-										value="Valider"
+										value="Validate"
 										id="genre"
 									/>
 								</form>

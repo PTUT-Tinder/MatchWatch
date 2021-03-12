@@ -88,7 +88,7 @@
 						You will join the corresponding room, a will enjoy our powerfull algorithme !
 					</p>
 					<div class="position-bouton-suivant">
-						<input class="bouton-suivant" type="submit" value="Suivant" />
+						<input class="bouton-suivant" type="submit" value="Next" />
 					</div>
 				</form>
 			</div>

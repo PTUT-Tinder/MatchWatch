@@ -48,16 +48,16 @@
 				<label for="pwd">Password</label>
 				<input bind:value={password} id="pwd" name="pwd" type="password" />
 
-				<input type="submit" name="connect" value="Se connecter" />
+				<input type="submit" name="connect" value="Log in" />
 			</form>
 		</div>
 
 		<div class="container container-inscr">
 			<h1>Not registered ?</h1>
 			<p>
-				A MatchWatch account is optionnal, but gives you great advantages !<a href="/about.html">More</a>
+				A MatchWatch account is optionnal, but gives you great advantages ! <a href="/about.html">More</a>
 			</p>
-			<a href="register.html" id="inscr">S'inscrire</a>
+			<a href="register.html" id="inscr">Register</a>
 		</div>
 	</div>
 </main>
