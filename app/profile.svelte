@@ -164,7 +164,7 @@
 			</div>
 
 			<div class="lastviews">
-				<h1>Last seen</h1>
+				<h1>Last match</h1>
 			</div>
 
 			<div class="reccos">

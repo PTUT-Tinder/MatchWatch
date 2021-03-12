@@ -40,18 +40,18 @@
         </li>
         <li>
           <a class="nav-button" href="join-room.html" id="joinRoom"
-            >Rejoindre un salon</a
+            >Join room</a
           >
         </li>
         <li>
           <a class="nav-button" href="create-room.html" id="createRoom"
-            >Créer un salon</a
+            >Create room</a
           >
         </li>
         {#if loggedIn}
           <li>
             <a class="nav-button" href="profile.html" id="profile"
-              >Mon profile</a
+              >My profile</a
             >
           </li>
         {/if}
@@ -61,11 +61,11 @@
     <div class="button-container">
       {#if loggedIn}
         <li>
-          <a href=" " id="login" on:click={deconnexion}>Se déconnecter</a>
+          <a href=" " id="login" on:click={deconnexion}>Log out</a>
         </li>
       {:else}
-        <li><a href="login.html" id="login">Se connecter</a></li>
-        <li><a href="register.html" id="register">S'inscrire</a></li>
+        <li><a href="login.html" id="login">Log in</a></li>
+        <li><a href="register.html" id="register">Register</a></li>
       {/if}
     </div>
   </div>
