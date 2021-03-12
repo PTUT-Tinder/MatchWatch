@@ -126,7 +126,7 @@
 					<div class="genres">
 						<ul class="zone-genre">
 							<li>
-								<h2 class="genres">Genres préférés :</h2>
+								<h2 class="genres">Favourites genres</h2>
 								<form
 									id="formulaireGenre"
 									action=""
@@ -164,15 +164,15 @@
 			</div>
 
 			<div class="lastviews">
-				<h1>Derniers vus</h1>
+				<h1>Last seen</h1>
 			</div>
 
 			<div class="reccos">
-				<h1>A regarder plus tard</h1>
+				<h1>Watch later</h1>
 			</div>
 		</div>
 	{:else}
-		<div class="logged-out">Vous n'êtes pas connecté</div>
+		<div class="logged-out">You are not logged in</div>
 	{/if}
 </main>
 
