@@ -59,10 +59,10 @@
 	<div>
 		<div class="ensemble">
 			<div class="zone-bleu">
-				<h1 class="bienvenue">Bienvenue&nbsp;!</h1>
+				<h1 class="bienvenue">Welcome !</h1>
 				<form action="" method="" on:submit={createRoom}>
 					<div>
-						<h2>Choisissez votre nom, il sera affiché aux autres</h2>
+						<h2>Choose your name, it will be shown to the other</h2>
 						<input
 							class="input-nom"
 							type="text"
@@ -71,10 +71,9 @@
 							bind:value={displayName}
 						/>
 					</div>
-					<p>Un salon sera créé, ainsi qu’un code de 6 caractères.</p>
+					<p>A room will be created, with a 6 letter long code.</p>
 					<p>
-						Les participants pourront utiliser ce code pour vous rejoindre dans
-						le salon, et vous pourrez choisir un film ensemble
+						People will use this code to join your room, so you will choose a movie together.
 					</p>
 					<div class="position-bouton-suivant">
 						<input class="bouton-suivant" type="submit" value="Suivant" />
@@ -82,20 +81,19 @@
 				</form>
 				<div class="position-lien">
 					<a class="lien" href="join-room.html"
-						>J'ai déja un code, rejoindre un salon</a
+						>I already have a code, join a room</a
 					>
 				</div>
 			</div>
 			<div class="zone-bleu">
-				<h1 class="titre2">Vous venez ici souvent&nbsp;?</h1>
+				<h1 class="titre2">Do you come here often ?</h1>
 				<p>
-					Le compte MatchWatch est optionnel, mais il vous offre de nombreux
-					avantages&nbsp;!
-					<a class="lien-more" href="about.html">En savoir plus</a>
+					A MatchWatch account is optionnal, but gives you great advantages !
+					<a class="lien-more" href="about.html">More</a>
 				</p>
 				<div class="disposition-bouton">
-					<a href="login.html" class="btn-connecter">Se connecter</a>
-					<a href="register.html" class="btn-register">S'inscrire</a>
+					<a href="login.html" class="btn-connecter">Log in</a>
+					<a href="register.html" class="btn-register">Register</a>
 				</div>
 			</div>
 		</div>

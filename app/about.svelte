@@ -13,20 +13,16 @@
             <h1 class="bienvenue">A Propos</h1>
 
             <p>
-                L'inscription à MatchWatch n'est pas obligatoire pour utiliser
-                notre application, cependant elle possède de nombreux avantages.
+                A MatchWatch account is optionnal, but gives you great advantages !
             </p>
             <p>
-                Envie de gagner du temps ? Garder en mémoire vos <strong>préférences de
-                genre cinématographique </strong>!
+                Wanna gain some time ? check your <strong>favourite cinematographic genres</strong>!
             </p>
             <p>
-                Le bon film aux mauvais moments ? Ajouter le à votre liste "<strong>A
-                regarder plus tard</strong>" !
+                A good film at a bad time ? Add it to your list of "<strong>Watch Later</strong>". Just click the star !
             </p>
             <p>
-                Garder également un oeil sur vos <strong>derniers matchs</strong> dans votre
-                profil.
+                Keep an eye on your <strong>last matchs</strong> in your profile
             </p>
         </div>
         <div class="zone-bleu">
