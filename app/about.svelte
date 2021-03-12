@@ -12,15 +12,29 @@
         <div class="zone-bleu">
             <h1 class="bienvenue">A Propos</h1>
 
-
-            <p>Inserez texte à propos</p>
-
-
-
+            <p>
+                L'inscription à MatchWatch n'est pas obligatoire pour utiliser
+                notre application, cependant elle possède de nombreux avantages.
+            </p>
+            <p>
+                Envie de gagner du temps ? Garder en mémoire vos <strong>préférences de
+                genre cinématographique </strong>!
+            </p>
+            <p>
+                Le bon film aux mauvais moments ? Ajouter le à votre liste "<strong>A
+                regarder plus tard</strong>" !
+            </p>
+            <p>
+                Garder également un oeil sur vos <strong>derniers matchs</strong> dans votre
+                profil.
+            </p>
         </div>
         <div class="zone-bleu">
             <h1 class="titre2">Maintenant vous en savez plus.</h1>
-            <p>Le compte MatchWatch est optionnel, mais il vous offre de nombreux avantages&nbsp;!</p>
+            <p>
+                Le compte MatchWatch est optionnel, mais il vous offre de
+                nombreux avantages&nbsp;!
+            </p>
             <div class="disposition-bouton">
                 <a href="login.html" class="btn-connecter">Se connecter</a>
                 <a href="register.html" class="btn-register">S'inscrire</a>
@@ -29,6 +43,4 @@
     </div>
 </main>
 
-<footer>
-
-</footer>
+<footer />
