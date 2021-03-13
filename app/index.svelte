@@ -11,27 +11,27 @@
     <div id="slogan">
         <img src={logo} alt="logoMatchWatch" />
         <div>
-            <h1>Trouvez le film</h1>
-            <h3>qui va mettre <br>tout le monde d'accord</h3>
-            <a href="create-room.html" id="chooseFilm">Choisir un film</a>
+            <h1>Find the movie</h1>
+            <h3>that will please everybody</h3>
+            <a href="create-room.html" id="chooseFilm">Choose a movie</a>
         </div>
     </div>
 
     <div id="container">
-        <h1>1&hellip; 2&hellip; 3&hellip; Trouvé&nbsp;!</h1>
+        <h1>1... 2... 3... Got It !</h1>
         <div id="1" class="etapes">
             <h1>1</h1>
-            <p>Connectez-vous avec vos amis ou commencez une session solo</p>
+            <p>Choose a film with your friends or start a solo session</p>
         </div>
 
         <div id="2" class="etapes">
             <h1>2</h1>
-            <p>Choisissez rapidement vos films préférés parmis les propositions</p>
+            <p>Choose quickly your favourite movies among loads of proposals</p>
         </div>
 
         <div id="3" class="etapes">
             <h1>3</h1>
-            <p>Profitezzz&nbsp;!</p>
+            <p>Enjoy !</p>
         </div>
     </div>
 </main>

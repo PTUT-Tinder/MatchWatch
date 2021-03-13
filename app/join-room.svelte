@@ -63,10 +63,10 @@
 	<div>
 		<div class="ensemble">
 			<div class="zone-bleu">
-				<h1 class="bienvenue">Bienvenue&nbsp;!</h1>
+				<h1 class="bienvenue">Welcome !</h1>
 				<form action="" method="" on:submit={joinRoom}>
 					<div>
-						<h2>Entrez le nom que vous voulez utiliser&nbsp;:</h2>
+						<h2>Choose your name, it will be shown to the other</h2>
 						<input
 							class="input-nom"
 							type="text"
@@ -76,7 +76,7 @@
 						/>
 					</div>
 					<div>
-						<h2>Entrez un code de session&nbsp;:</h2>
+						<h2>Enter the session code</h2>
 						<input
 							class="input-nom"
 							type="text"
@@ -87,26 +87,24 @@
 							maxlength="6"
 						/>
 					</div>
-					<p>Entrez le code à 6 caractères fourni.</p>
+					<p>Enter a code</p>
 					<p>
-						Vous rejoindrez le salon correspondant et pourrez profiter au
-						maximum de la puissance redoutable de notre algorithme.
+						You will join the corresponding room, a will enjoy our powerfull algorithme !
 					</p>
 					<div class="position-bouton-suivant">
-						<input class="bouton-suivant" type="submit" value="Suivant" />
+						<input class="bouton-suivant" type="submit" value="Next" />
 					</div>
 				</form>
 			</div>
 			<div class="zone-bleu">
-				<h1 class="titre2">Vous venez ici souvent&nbsp;?</h1>
+				<h1 class="titre2">Do you come here often ?</h1>
 				<p>
-					Le compte MatchWatch est optionnel, mais il vous offre de nombreux
-					avantages&nbsp;!
-					<a class="lien-more" href="about.html">En savoir plus</a>
+					A MatchWatch account is optionnal, but gives you great advantages ! 
+					<a class="lien-more" href="about.html">More</a>
 				</p>
 				<div class="disposition-bouton">
-					<a href="login.html" class="btn-connecter">Se connecter</a>
-					<a href="register.html" class="btn-register">S'inscrire</a>
+					<a href="login.html" class="btn-connecter">Log in</a>
+					<a href="register.html" class="btn-register">Register</a>
 				</div>
 			</div>
 		</div>

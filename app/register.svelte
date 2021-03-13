@@ -41,18 +41,18 @@
 <main>
 	<div class="container-global">
 		<div class="container container-register">
-			<h1>Bienvenue&nbsp;!</h1>
+			<h1>Welcome</h1>
 			<form action="" method="" on:submit={register}>
 				<label for="pseudo">Pseudo</label>
 				<input bind:value={username} id="pseudo" name="pseudo" type="text" />
 
-				<label for="mail">Adresse Mail</label>
+				<label for="mail">e-mail</label>
 				<input bind:value={email} id="mail" name="mail" type="text" />
 
-				<label for="pwd">Mot de passe</label>
+				<label for="pwd">Password</label>
 				<input bind:value={password} id="pwd" name="pwd" type="password" />
 
-				<label for="confirmpwd">Confirmation du mot de passe</label>
+				<label for="confirmpwd">Password confirmation</label>
 				<input id="confirmpwd" name="confirmpwd" type="password" />
 
 				<input type="submit" name="connect" value="S'inscrire" id="register" />
@@ -60,12 +60,11 @@
 		</div>
 
 		<div class="container container-login">
-			<h1>Vous êtes déjà inscrit&nbsp;?</h1>
+			<h1>Already registered?</h1>
 			<p>
-				Le compte MatchWatch est optionnel, mais il vous offre de nombreux
-				avantages&nbsp;! <a id="about" href="/about.html">En savoir plus</a>
+				A MatchWatch account is optionnal, but gives you great advantages ! <a id="about" href="/about.html">More</a>
 			</p>
-			<a href="login.html" id="login">Se connecter</a>
+			<a href="login.html" id="login">Log in</a>
 		</div>
 	</div>
 </main>
