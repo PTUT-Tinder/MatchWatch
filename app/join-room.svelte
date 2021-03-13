@@ -63,10 +63,10 @@
 	<div>
 		<div class="ensemble">
 			<div class="zone-bleu">
-				<h1 class="bienvenue">Welcome !</h1>
+				<h1 class="bienvenue">Welcome!</h1>
 				<form action="" method="" on:submit={joinRoom}>
 					<div>
-						<h2>Choose your name, it will be shown to the other</h2>
+						<h2>Choose your name, it will be shown to everyone</h2>
 						<input
 							class="input-nom"
 							type="text"
@@ -76,7 +76,7 @@
 						/>
 					</div>
 					<div>
-						<h2>Enter the session code</h2>
+						<h2>Enter the room code</h2>
 						<input
 							class="input-nom"
 							type="text"
@@ -89,7 +89,7 @@
 					</div>
 					<p>Enter a code</p>
 					<p>
-						You will join the corresponding room, a will enjoy our powerfull algorithme !
+						You will join the corresponding room and enjoy our powerful algorithm!
 					</p>
 					<div class="position-bouton-suivant">
 						<input class="bouton-suivant" type="submit" value="Next" />
@@ -97,9 +97,9 @@
 				</form>
 			</div>
 			<div class="zone-bleu">
-				<h1 class="titre2">Do you come here often ?</h1>
+				<h1 class="titre2">Come here often?</h1>
 				<p>
-					A MatchWatch account is optionnal, but gives you great advantages ! 
+					A MatchWatch account is optionnal, but gives you many advantages! 
 					<a class="lien-more" href="about.html">More</a>
 				</p>
 				<div class="disposition-bouton">

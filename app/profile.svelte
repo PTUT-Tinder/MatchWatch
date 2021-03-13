@@ -9,7 +9,6 @@
 	let user;
 	let editing = false;
 	let form;
-	let genre;
 	let newPassword;
 	let oldPassword;
 

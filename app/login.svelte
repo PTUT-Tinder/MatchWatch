@@ -40,9 +40,9 @@
 <main>
 	<div class="container-global">
 		<div class="container container-login">
-			<h1>Welcome !</h1>
+			<h1>Welcome!</h1>
 			<form action="" method="" on:submit={login}>
-				<label for="mail">e-mail</label>
+				<label for="mail">Email</label>
 				<input bind:value={email} id="mail" name="mail" type="text" />
 
 				<label for="pwd">Password</label>
@@ -53,9 +53,9 @@
 		</div>
 
 		<div class="container container-inscr">
-			<h1>Not registered ?</h1>
+			<h1>Not registered?</h1>
 			<p>
-				A MatchWatch account is optionnal, but gives you great advantages ! <a href="/about.html">More</a>
+				A MatchWatch account is optionnal, but gives you many advantages! <a href="/about.html">Learn more</a>
 			</p>
 			<a href="register.html" id="inscr">Register</a>
 		</div>

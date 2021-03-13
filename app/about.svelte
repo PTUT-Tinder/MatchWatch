@@ -13,27 +13,26 @@
             <h1 class="bienvenue">A Propos</h1>
 
             <p>
-                A MatchWatch account is optionnal, but gives you great advantages !
+                A MatchWatch account is optionnal, but gives you many advantages!
             </p>
             <p>
-                Wanna gain some time ? check your <strong>favourite cinematographic genres</strong>!
+                Wanna save some time? Set your <strong>favourite movie genres</strong> so you don't have to set them again!
             </p>
             <p>
-                A good film at a bad time ? Add it to your list of "<strong>Watch Later</strong>". Just click the star !
+                Right movie, wrong time? Add it to your "<strong>Watch Later</strong>" list by clicking the star!
             </p>
             <p>
-                Keep an eye on your <strong>last matchs</strong> in your profile
+                Keep an eye on your <strong>last matches</strong> from your profile.
             </p>
         </div>
         <div class="zone-bleu">
-            <h1 class="titre2">Maintenant vous en savez plus.</h1>
+            <h1 class="titre2">Now that you know about that</h1>
             <p>
-                Le compte MatchWatch est optionnel, mais il vous offre de
-                nombreux avantages&nbsp;!
+                A MatchWatch account is optionnal, but gives you many advantages!
             </p>
             <div class="disposition-bouton">
-                <a href="login.html" class="btn-connecter">Se connecter</a>
-                <a href="register.html" class="btn-register">S'inscrire</a>
+                <a href="login.html" class="btn-connecter">Log in</a>
+                <a href="register.html" class="btn-register">Register</a>
             </div>
         </div>
     </div>

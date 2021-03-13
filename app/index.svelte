@@ -18,7 +18,7 @@
     </div>
 
     <div id="container">
-        <h1>1... 2... 3... Got It !</h1>
+        <h1>1... 2... 3... It's a match!</h1>
         <div id="1" class="etapes">
             <h1>1</h1>
             <p>Choose a film with your friends or start a solo session</p>
@@ -26,12 +26,12 @@
 
         <div id="2" class="etapes">
             <h1>2</h1>
-            <p>Choose quickly your favourite movies among loads of proposals</p>
+            <p>Quickly pick your favourite movies among the suggestions</p>
         </div>
 
         <div id="3" class="etapes">
             <h1>3</h1>
-            <p>Enjoy !</p>
+            <p>Enjoy!</p>
         </div>
     </div>
 </main>

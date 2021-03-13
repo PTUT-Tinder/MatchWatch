@@ -60,10 +60,10 @@
 	<div>
 		<div class="ensemble">
 			<div class="zone-bleu">
-				<h1 class="bienvenue">Welcome !</h1>
+				<h1 class="bienvenue">Welcome!</h1>
 				<form action="" method="" on:submit={createRoom}>
 					<div>
-						<h2>Choose your name, it will be shown to the other</h2>
+						<h2>Choose your name, it will be shown to everyone</h2>
 						<input
 							class="input-nom"
 							type="text"
@@ -72,9 +72,9 @@
 							bind:value={displayName}
 						/>
 					</div>
-					<p>A room will be created, with a 6 letter long code.</p>
+					<p>A room will be created with a 6-letter code.</p>
 					<p>
-						People will use this code to join your room, so you will choose a movie together.
+						The other participants will use this code to join your room and choose a movie with you.
 					</p>
 					<div class="position-bouton-suivant">
 						<input class="bouton-suivant" type="submit" value="Next" />
@@ -87,10 +87,10 @@
 				</div>
 			</div>
 			<div class="zone-bleu">
-				<h1 class="titre2">Do you come here often ?</h1>
+				<h1 class="titre2">Come here often?</h1>
 				<p>
-					A MatchWatch account is optionnal, but gives you great advantages !
-					<a class="lien-more" href="about.html">More</a>
+					A MatchWatch account is optionnal, but gives you many advantages!
+					<a class="lien-more" href="about.html">Learn more</a>
 				</p>
 				<div class="disposition-bouton">
 					<a href="login.html" class="btn-connecter">Log in</a>
