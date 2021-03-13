@@ -23,6 +23,10 @@ fetch("/api/user/@me", {
 	}
 
 	user = data;
+
+	if (user.favoriteGenres) {
+		selectedGenres = user.favoriteGenres;
+	}
 });
 
 if (roomId == null) {
