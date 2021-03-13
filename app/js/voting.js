@@ -1,3 +1,14 @@
+/*
+
+-----
+
+Ce fichier n'est plus utilisé, mais je le préserve pour mettre en garde
+les futures générations de codeurs des dangers de JQuery.
+
+-----
+
+*/
+
 import $ from "jquery";
 
 $(document).ready(function(){

@@ -10,6 +10,8 @@ export default function handleErrors(res, data) {
 			err = "unknown error";
 		}
 
+		alert(err);
+
 		throw new Error(err);
 	}
 }

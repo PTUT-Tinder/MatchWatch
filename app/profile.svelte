@@ -10,19 +10,31 @@
 	let editing = false;
 	let form;
 	let genre;
+	let newPassword;
+	let oldPassword;
 
 	function saveChanges() {
+		const body = {
+			email: user.email,
+			username: user.username,
+			favoriteGenres: user.favoriteGenres,
+		};
+	
+		if (oldPassword && newPassword) {
+			body.oldPassword = oldPassword;
+			body.newPassword = newPassword;
+
+			oldPassword = "";
+			newPassword = "";
+		}
+
 		return fetch("/api/user/@me", {
 			method: "PATCH",
 			headers: {
 				"Content-Type": "application/json",
 				"Authorization": window.localStorage.getItem("token"),
 			},
-			body: JSON.stringify({
-				email: user.email,
-				username: user.username,
-				favoriteGenres: user.favoriteGenres,
-			}),
+			body: JSON.stringify(body),
 		})
 			.then(async (res) => {
 				const data = await res.json();
@@ -85,7 +97,9 @@
 
 				handleErrors(res, data);
 
-				user = data;
+				if (!data.id.startsWith("temp_")) {
+					user = data;
+				}
 			})
 			.catch((err) => console.log(err));
 	}
@@ -121,6 +135,16 @@
 
 								<input type="submit" value="" class="icon" />
 							</form>
+							{#if editing}
+							<form action="" method="" on:submit={formSubmit}>
+								<label for="oldPwd">Current password</label>
+									<input type="password" bind:value={oldPassword} id="oldPwd"  name="oldPwd"/>
+									<label for="newPwd">New password</label>
+									<input type="password" bind:value={newPassword} id="newPwd" name="newPwd"/>
+								
+								<input type="submit" value="" class="icon" />
+							</form>
+							{/if}
 						</div>
 					</div>
 					<div class="genres">

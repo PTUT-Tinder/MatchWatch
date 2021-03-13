@@ -16,6 +16,10 @@ body {
     color: #ffffff;
 }
 
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 #slogan {
     background-image: url(../img/landing_page_background.jpg);
     background-size: cover;

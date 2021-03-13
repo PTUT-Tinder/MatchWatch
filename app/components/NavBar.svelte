@@ -15,9 +15,11 @@
   function deconnexion() {
     window.localStorage.clear();
   }
+
+  export let thick = false;
 </script>
 
-<nav>
+<nav class:thick={thick}>
   <div class="toggle">
     <button
       class="hamburger hamburger--spin"
@@ -91,6 +93,28 @@
     display: inline-block;
   }
 
+  .thick #nav-bar {
+    position: fixed;
+    list-style-type: none;
+    width: 100%;
+    background-color: #282e3e;
+    margin: 0;
+    height: 80px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), 0px 0px 2px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+
+  .thick #nav-bar > li img {
+    height: 60px;
+    margin-left: 130px;
+    margin-top: 40px;
+    transform: translate(-25%, -25%);
+  }
+
+  .thick .toggle {
+    top: 16px;
+  }
+
   .button-container {
     width: 300px;
     height: 75px;
@@ -98,6 +122,10 @@
     position: fixed;
     right: 50px;
     margin-top: 50px;
+  }
+
+  .thick .button-container {
+    margin-top: 30px;
   }
 
   .toggle {

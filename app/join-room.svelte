@@ -4,12 +4,15 @@
 	import "./css/join-room.css";
 	import NavBar from "./components/NavBar.svelte";
 	import handleErrors from "./js/handle-errors";
+	import ensureTokenValidity from "./js/ensure-token-validity";
 
 	let displayName;
 	let roomId;
 
 	async function joinRoom(event) {
 		event.preventDefault();
+
+		await ensureTokenValidity();
 
 		if (window.localStorage.getItem("token") == null) {
 			await fetch("/api/create-temp-user", {
@@ -30,14 +33,13 @@
 				})
 		}
 
-		await fetch("/api/join-room", {
+		await fetch(`/api/room/${roomId}/join`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 				"Authorization": window.localStorage.getItem("token"),
 			},
 			body: JSON.stringify({
-				id: roomId,
 				displayName,
 			}),
 		})
@@ -81,6 +83,8 @@
 							id="id"
 							name="id"
 							bind:value={roomId}
+							on:input={() => roomId = roomId.toUpperCase()}
+							maxlength="6"
 						/>
 					</div>
 					<p>Entrez le code à 6 caractères fourni.</p>

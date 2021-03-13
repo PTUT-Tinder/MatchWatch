@@ -4,11 +4,14 @@
 	import "./css/create-room.css";
 	import NavBar from "./components/NavBar.svelte";
 	import handleErrors from "./js/handle-errors";
+	import ensureTokenValidity from "./js/ensure-token-validity";
 
 	let displayName;
 
 	async function createRoom(event) {
 		event.preventDefault();
+
+		await ensureTokenValidity();
 
 		if (window.localStorage.getItem("token") == null) {
 			await fetch("/api/create-temp-user", {
@@ -29,7 +32,7 @@
 				})
 		}
 
-		await fetch("/api/create-room", {
+		await fetch("/api/room/create", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -44,10 +47,8 @@
 
 				handleErrors(res, data);
 
-				console.log(data);
 				window.localStorage.setItem("room-id", data.id);
 				window.location = "voting.html?id=" + data.id;
-				window.alert("Partagez ce code avec vos amis : " + data.id);
 			})
 			.catch((err) => console.log(err));
 	}
